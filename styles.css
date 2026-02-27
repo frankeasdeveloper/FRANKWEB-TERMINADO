@@ -10676,6 +10676,11 @@ html:not(.is-scrolling) .community-card {
         top: -10px !important;
     }
 
+    #checkoutModal .payment-card.type-btc img,
+    #checkoutModal .payment-card.type-eth img {
+        top: 0px !important;
+    }
+
     /* Network Tags (USDT) */
     #checkoutModal .payment-card .network-tag {
         position: absolute !important;
