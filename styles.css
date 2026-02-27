@@ -9368,7 +9368,7 @@ h1.hero-title .title-line {
     .comparison-table {
         transform: scale(0.48) !important;
         width: 209% !important;
-        margin-bottom: -1500px !important;
+        margin-bottom: -1200px !important;
     }
 
     .comparison .section-title {
@@ -9384,7 +9384,7 @@ h1.hero-title .title-line {
     /* ---- COMMUNITY / TELEGRAM ---- */
     section.community,
     .community#community {
-        margin-top: -600px !important;
+        margin-top: -350px !important;
     }
 
     section.community .section-title {
