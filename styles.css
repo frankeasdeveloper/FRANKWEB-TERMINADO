@@ -8625,7 +8625,7 @@ h1.hero-title .title-line {
         margin-top: 0 !important;
         margin-bottom: 6rem !important;
         position: relative !important;
-        top: 0 !important;
+        top: -30px !important;
     }
 
     .products-grid,
