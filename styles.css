@@ -7790,7 +7790,7 @@ body {
 
     #checkoutModal .network-tag {
         position: absolute !important;
-        bottom: -18px !important;
+        bottom: 5px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         font-size: 0.65rem !important;
@@ -10676,7 +10676,7 @@ html:not(.is-scrolling) .community-card {
     /* Network Tags (USDT) */
     #checkoutModal .payment-card .network-tag {
         position: absolute !important;
-        bottom: -15px !important;
+        bottom: 5px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         font-size: 0.55rem !important;
