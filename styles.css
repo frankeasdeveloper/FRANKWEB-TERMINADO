@@ -8460,7 +8460,7 @@ h1.hero-title .title-line {
     /* Reduce community section top margin on mobile */
     section.community,
     .community#community {
-        margin-top: -400px !important;
+        margin-top: -700px !important;
         padding-top: 0px !important;
     }
 
