@@ -7938,8 +7938,8 @@ body {
     /* Move Community Section Up - Reduce top margin */
     section.community,
     #community {
-        margin-top: 50px !important;
-        padding-top: 10px !important;
+        margin-top: -50px !important;
+        padding-top: 0 !important;
     }
 
     /* Reduce comparison section bottom space on mobile */
@@ -8042,15 +8042,14 @@ body {
 
     /* Community section - title on one line and moved up */
     section.community {
-        margin-top: 0 !important;
-        /* Reset negative margin to avoid gaps with Challenges section */
-        padding-top: 20px !important;
+        margin-top: -50px !important;
+        padding-top: 0 !important;
         background: transparent !important;
     }
 
     section.community .section-title {
         font-size: 1.6rem !important;
-        margin-bottom: 101px !important;
+        margin-bottom: 20px !important;
     }
 
     /* Telegram cards shuffle effect - expanded for mobile */
@@ -9382,7 +9381,7 @@ h1.hero-title .title-line {
     /* ---- COMMUNITY / TELEGRAM ---- */
     section.community .section-title {
         font-size: 1.4rem !important;
-        margin-bottom: 85px !important;
+        margin-bottom: 20px !important;
     }
 
     .telegram-cards-grid {
