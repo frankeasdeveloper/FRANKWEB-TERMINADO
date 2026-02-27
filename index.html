@@ -290,30 +290,7 @@
         .lang-toggle {
             cursor: pointer !important;
         }
-
-        /* Font loading guard - prevent FOUT layout break */
-        .navbar {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .fonts-loaded .navbar {
-            opacity: 1;
-        }
     </style>
-    <script>
-        // Reveal navbar once fonts are loaded (with 2s fallback)
-        var fontTimer = setTimeout(function () { document.documentElement.classList.add('fonts-loaded'); }, 2000);
-        if (document.fonts) {
-            document.fonts.ready.then(function () {
-                clearTimeout(fontTimer);
-                document.documentElement.classList.add('fonts-loaded');
-            });
-        } else {
-            clearTimeout(fontTimer);
-            document.documentElement.classList.add('fonts-loaded');
-        }
-    </script>
 </head>
 
 <body>
@@ -414,10 +391,7 @@
                 }
             }
             fix();
-            window.addEventListener('load', fix);
-            setTimeout(fix, 100);
-            setTimeout(fix, 500);
-            setTimeout(fix, 2000);
+            document.addEventListener('DOMContentLoaded', fix);
         })();
     </script>
 
@@ -501,24 +475,6 @@
             }
             fix();
             document.addEventListener('DOMContentLoaded', fix);
-            window.addEventListener('load', fix);
-            setTimeout(fix, 300);
-            setTimeout(fix, 1000);
-            setTimeout(fix, 2000);
-            setTimeout(fix, 3500);
-            setTimeout(fix, 5000);
-            // Watch for language changes and re-apply styles
-            function observe() {
-                var a = document.getElementById('mobileLangBtn');
-                var b = document.getElementById('mobileCartBtn');
-                var obs = new MutationObserver(function () { setTimeout(fix, 50); });
-                var cfg = { childList: true, subtree: true, attributes: true };
-                if (a) obs.observe(a, cfg);
-                if (b) obs.observe(b, cfg);
-            }
-            document.addEventListener('DOMContentLoaded', observe);
-            window.addEventListener('load', observe);
-            setTimeout(observe, 1000);
         })();
     </script>
 
@@ -582,11 +538,9 @@
                 <!-- Video Container with Neon Frame -->
                 <div class="hero-video-container">
                     <div class="video-glitch-overlay"></div>
-                    <iframe id="heroVideo" 
-                        src="https://www.youtube.com/embed/gbt6fOJASeU?autoplay=1&mute=1&loop=1&playlist=gbt6fOJASeU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" 
-                        title="Frank EAs Trading Robot" 
-                        frameborder="0" 
-                        allow="autoplay; encrypted-media" 
+                    <iframe id="heroVideo"
+                        src="https://www.youtube.com/embed/gbt6fOJASeU?autoplay=1&mute=1&loop=1&playlist=gbt6fOJASeU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+                        title="Frank EAs Trading Robot" frameborder="0" allow="autoplay; encrypted-media"
                         allowfullscreen>
                     </iframe>
                 </div>
