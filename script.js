@@ -50,54 +50,31 @@ function initializeApp() {
 
 function initializeHeroVideo() {
     const video = document.getElementById('heroVideo');
-    const glitchOverlay = document.querySelector('.video-glitch-overlay');
     if (!video) return;
 
-    // Start muted for guaranteed smooth autoplay
-    video.muted = true;
-    updateMuteButton(true);
-
-    // ENSURE INFINITE LOOP - Never stop
-    video.loop = true;
-
-    // Function to trigger glitch effect
-    function triggerGlitchEffect() {
-        if (glitchOverlay) {
-            glitchOverlay.classList.add('active');
-            setTimeout(() => {
-                glitchOverlay.classList.remove('active');
-            }, 500);
-        }
+    // If it's an iframe (YouTube embed), no JS control needed
+    if (video.tagName === 'IFRAME') {
+        console.log('Hero video is YouTube embed - no JS control needed');
+        return;
     }
 
-    // Detect when video is about to loop (near end)
-    video.addEventListener('timeupdate', function () {
-        if (video.duration && video.currentTime >= video.duration - 0.1) {
-            triggerGlitchEffect();
-        }
-    });
+    // Original video element logic (kept as fallback)
+    const glitchOverlay = document.querySelector('.video-glitch-overlay');
+    video.muted = true;
+    updateMuteButton(true);
+    video.loop = true;
 
-    // Restart on end (fallback if loop fails)
     video.addEventListener('ended', function () {
-        triggerGlitchEffect();
         video.currentTime = 0;
         video.play();
     });
 
-    // Restart on error (prevent black screen)
-    video.addEventListener('error', function () {
-        video.currentTime = 0;
-        video.play();
-    });
-
-    // Restart if paused unexpectedly
     video.addEventListener('pause', function () {
         if (!document.hidden) {
             video.play();
         }
     });
 
-    // Ensure video plays
     video.play().catch(error => {
         console.log('Video autoplay failed:', error);
     });
@@ -752,10 +729,10 @@ function renderTestimonials() {
         let avatar;
         if (isFemale) {
             const fIdx = (femaleIdx % 5) + 1;
-            avatar = `./assets/testimonials/female-${fIdx}.png`;
+            avatar = `./assets/testimonials/female-${fIdx}.webp`;
         } else {
             const mIdx = (maleIdx % 5) + 1;
-            avatar = `./assets/testimonials/male-${mIdx}.png`;
+            avatar = `./assets/testimonials/male-${mIdx}.webp`;
         }
 
         const rating = ratingsPool[index % ratingsPool.length];

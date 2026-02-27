@@ -149,7 +149,7 @@
     // 9c. Visibility API — pause video when tab hidden
     function initVisibilityAPI() {
         const heroVideo = document.querySelector('#heroVideo');
-        if (!heroVideo) return;
+        if (!heroVideo || heroVideo.tagName === 'IFRAME') return;
 
         document.addEventListener('visibilitychange', () => {
             if (document.hidden) {
