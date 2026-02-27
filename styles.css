@@ -10712,9 +10712,12 @@ html:not(.is-scrolling) .community-card {
         object-fit: contain !important;
     }
 
-    /* Ocultar tags de red para mayor limpieza */
+    /* Mostrar tags de red en mobile */
     #checkoutModal .network-tag {
-        display: none !important;
+        display: block !important;
+        font-size: 0.6rem !important;
+        padding: 2px 6px !important;
+        border-radius: 4px !important;
     }
 
     /* 2. QR - GRANDE y Centrado (Protagonista Real) */
