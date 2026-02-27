@@ -2267,7 +2267,8 @@ border-bottom: 2px solid var(--color-diamond);
    ============================================ */
 
 .community {
-    padding: 2rem 0 0;
+    padding: 0;
+    margin-top: -300px;
     position: relative;
     overflow: hidden;
 }
