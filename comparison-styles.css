@@ -1,0 +1,198 @@
+/* ============================================
+   COMPARISON TABLE - CLEAN PROFESSIONAL DESIGN
+   ============================================ */
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+    margin: 3rem 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(5, 5, 15, 0.95);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================================
+   TABLE HEADERS
+   ============================================ */
+
+.comparison-table thead {
+    background: linear-gradient(135deg, rgba(10, 10, 30, 0.95), rgba(5, 5, 20, 0.95));
+    border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.comparison-table th {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.comparison-table th.feature-col {
+    text-align: left;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.4rem;
+}
+
+/* Robot Column Headers - Clean with Color Accents */
+.comparison-table th.robot-col {
+    position: relative;
+    color: white;
+}
+
+.comparison-table th.zafiro {
+    background: linear-gradient(180deg, rgba(255, 0, 255, 0.15), transparent);
+    color: #FF00FF;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+.comparison-table th.emerald {
+    background: linear-gradient(180deg, rgba(0, 255, 0, 0.15), transparent);
+    color: #00FF00;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.comparison-table th.diamond {
+    background: linear-gradient(180deg, rgba(0, 255, 255, 0.15), transparent);
+    color: #00FFFF;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* ============================================
+   TABLE BODY
+   ============================================ */
+
+.comparison-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(0, 255, 255, 0.03);
+}
+
+/* Section Headers */
+.comparison-table tbody tr.section-header {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.1), transparent);
+}
+
+.comparison-table tbody tr.section-header td {
+    padding: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #00FFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Table Cells */
+.comparison-table td {
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+/* ============================================
+   ROBOT-SPECIFIC HOVER EFFECTS (SUBTLE)
+   Excludes payment rows which span all columns
+   ============================================ */
+
+.comparison-table tbody tr:not(.section-header):not(.payment-row):hover td:nth-child(2) {
+    background: rgba(255, 0, 255, 0.03);
+    border-left: 2px solid rgba(255, 0, 255, 0.3);
+}
+
+.comparison-table tbody tr:not(.section-header):not(.payment-row):hover td:nth-child(3) {
+    background: rgba(0, 255, 0, 0.03);
+    border-left: 2px solid rgba(0, 255, 0, 0.3);
+}
+
+.comparison-table tbody tr:not(.section-header):not(.payment-row):hover td:nth-child(4) {
+    background: rgba(0, 255, 255, 0.03);
+    border-left: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+/* ============================================
+   COMPARISON NOTES
+   ============================================ */
+
+.comparison-notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.note-card {
+    background: rgba(10, 10, 30, 0.9);
+    border: 2px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.note-card:hover {
+    border-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.note-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.note-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.note-card strong {
+    color: #00FFFF;
+    font-weight: 700;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .comparison-table th {
+        font-size: 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .comparison-table td {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    .comparison-table tbody tr.section-header td {
+        font-size: 1rem;
+    }
+}

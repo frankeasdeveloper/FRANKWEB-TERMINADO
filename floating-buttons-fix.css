@@ -1,0 +1,129 @@
+/* ============================================
+   FLOATING BUTTONS - CRITICAL OVERRIDE
+   ============================================ */
+
+/* CRITICAL: Ensure html and body don't break fixed positioning */
+html {
+    height: 100% !important;
+    position: static !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+body {
+    height: auto !important;
+    min-height: 100% !important;
+    position: static !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+}
+
+/* Chat Toggle Button - ALWAYS VISIBLE */
+#chatToggle,
+.chat-toggle {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 65px !important;
+    height: 65px !important;
+    z-index: 2147483647 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #00ffff 0%, #0088cc 100%) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    box-shadow: 0 5px 25px rgba(0, 255, 255, 0.5) !important;
+    border: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* Floating Mute Button - ALWAYS VISIBLE */
+#floating-mute-btn,
+.floating-mute-button {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    transform: none !important;
+    width: 55px !important;
+    height: 55px !important;
+    z-index: 2147483647 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(0, 100, 255, 0.2)) !important;
+    border: 1px solid rgba(0, 255, 255, 0.5) !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.floating-mute-button:hover {
+    transform: scale(1.1) !important;
+}
+
+
+/* Chat Window */
+#chatWindow,
+.chat-window {
+    position: fixed !important;
+    bottom: 110px !important;
+    right: 30px !important;
+    z-index: 2147483646 !important;
+}
+
+/* ============================================
+   MOBILE OVERRIDE - Allow page to end at content
+   ============================================ */
+@media (max-width: 768px) {
+    html {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: fit-content !important;
+    }
+
+    body {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: fit-content !important;
+    }
+
+    /* HIDE chat button on mobile only */
+    #chatToggle,
+    .chat-toggle {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: fit-content !important;
+        overflow-y: auto !important;
+    }
+
+    body {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: fit-content !important;
+        overflow-y: auto !important;
+    }
+
+    /* HIDE chat button on mobile only */
+    #chatToggle,
+    .chat-toggle {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+}

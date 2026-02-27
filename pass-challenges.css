@@ -1,0 +1,790 @@
+/* ============================================
+   PASS CHALLENGES SECTION - Frank EAs
+   ============================================ */
+
+/* --- NAV "NEW" Badge (CSS ::after - survives i18n innerHTML) --- */
+.nav-challenges-link {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-challenges-link::before {
+    content: 'NEW' !important;
+    position: absolute !important;
+    top: -12px !important;
+    right: -8px !important;
+    background: #e01030 !important;
+    color: #fff !important;
+    font-size: 0.5rem !important;
+    font-weight: 800 !important;
+    padding: 2px 5px !important;
+    border-radius: 8px !important;
+    letter-spacing: 0.3px !important;
+    line-height: 1.2 !important;
+    box-shadow: 0 0 6px rgba(224, 16, 48, 0.5) !important;
+    pointer-events: none !important;
+    font-family: 'Orbitron', sans-serif !important;
+    white-space: nowrap !important;
+    z-index: 10 !important;
+    width: auto !important;
+    height: auto !important;
+    border: none !important;
+    animation: none !important;
+}
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(255, 23, 68, 0.6);
+    }
+
+    50% {
+        transform: scale(1.15);
+        box-shadow: 0 0 16px rgba(255, 23, 68, 0.9);
+    }
+}
+
+/* --- Section Base --- */
+.pass-challenges-section {
+    position: relative;
+    padding: 80px 0 100px;
+    overflow: hidden;
+}
+
+.pass-challenges-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* --- "Compatible" Banner --- */
+.propfirm-compat-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.08), rgba(0, 200, 255, 0.08));
+    border: 1px solid rgba(0, 255, 136, 0.25);
+    border-radius: 50px;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.compat-icon {
+    font-size: 1.4rem;
+}
+
+.compat-text {
+    color: #00ff88;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Prop Firm Logo Scroll Marquee --- */
+.propfirm-scroll-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.propfirm-scroll-track {
+    display: flex;
+    gap: 20px;
+    animation: propfirmScroll 40s linear infinite;
+    width: max-content;
+}
+
+.propfirm-logo-item {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 20px;
+    background: rgba(10, 10, 30, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    min-width: 120px;
+    min-height: 90px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.propfirm-logo-item:hover {
+    background: rgba(15, 15, 40, 0.95);
+    border-color: rgba(0, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.1);
+}
+
+.propfirm-logo-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+    filter: brightness(1.1);
+}
+
+.propfirm-logo-item span {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+.propfirm-text-fallback {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-weight: 600 !important;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+}
+
+@keyframes propfirmScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* --- Challenge Cards Grid --- */
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Individual Challenge Card --- */
+.challenge-card {
+    position: relative;
+    background: rgba(10, 10, 30, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+}
+
+.challenge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.5), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 255, 255, 0.1), 0 0 30px rgba(0, 255, 255, 0.05);
+}
+
+.challenge-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Header */
+.challenge-card-header {
+    margin-bottom: 20px;
+}
+
+.challenge-size {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 4px;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.challenge-label {
+    display: block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Card Price */
+.challenge-card-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.challenge-currency {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.challenge-amount {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #00ff88;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+.challenge-usd {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(0, 255, 136, 0.6);
+    margin-left: 4px;
+    align-self: flex-end;
+    margin-bottom: 6px;
+}
+
+/* Features List */
+.challenge-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.challenge-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.challenge-features li:last-child {
+    border-bottom: none;
+}
+
+.check-icon {
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* Add to Cart Button */
+.challenge-cart-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(0, 200, 255, 0.1));
+    border: 1px solid rgba(0, 255, 255, 0.35);
+    border-radius: 12px;
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.challenge-cart-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), rgba(0, 200, 255, 0.2));
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* --- Popular Tag (100K) --- */
+.challenge-popular {
+    border-color: rgba(255, 215, 0, 0.3);
+    background: rgba(10, 10, 30, 0.9);
+}
+
+.challenge-popular::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.6), transparent);
+    opacity: 1;
+}
+
+.challenge-popular:hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.12), 0 0 30px rgba(255, 215, 0, 0.06);
+}
+
+.challenge-popular-tag {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 4px 16px;
+    border-radius: 0 0 10px 10px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.35);
+}
+
+/* --- Premium Tag (200K) --- */
+.challenge-premium {
+    border-color: rgba(180, 0, 255, 0.3);
+    background: rgba(15, 5, 30, 0.9);
+}
+
+.challenge-premium::before {
+    background: linear-gradient(90deg, transparent, rgba(180, 0, 255, 0.6), transparent);
+    opacity: 1;
+}
+
+.challenge-premium:hover {
+    border-color: rgba(180, 0, 255, 0.5);
+    box-shadow: 0 20px 60px rgba(180, 0, 255, 0.12), 0 0 30px rgba(180, 0, 255, 0.06);
+}
+
+.challenge-premium-tag {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #b400ff, #7c00ff);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 4px 16px;
+    border-radius: 0 0 10px 10px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(180, 0, 255, 0.35);
+}
+
+.challenge-premium .challenge-amount {
+    color: #b400ff;
+    text-shadow: 0 0 20px rgba(180, 0, 255, 0.4);
+}
+
+.challenge-premium .challenge-currency {
+    color: #b400ff;
+}
+
+.challenge-premium .challenge-usd {
+    color: rgba(180, 0, 255, 0.6);
+}
+
+.challenge-premium .challenge-cart-btn {
+    background: linear-gradient(135deg, rgba(180, 0, 255, 0.15), rgba(120, 0, 255, 0.1));
+    border-color: rgba(180, 0, 255, 0.35);
+    color: #b400ff;
+}
+
+.challenge-premium .challenge-cart-btn:hover {
+    background: linear-gradient(135deg, rgba(180, 0, 255, 0.3), rgba(120, 0, 255, 0.2));
+    box-shadow: 0 0 25px rgba(180, 0, 255, 0.25);
+}
+
+/* === COMING SOON OVERLAY === */
+.coming-soon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.coming-soon-content {
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Padlock SVG */
+.padlock-container {
+    margin-bottom: 24px;
+}
+
+.padlock-icon {
+    width: 80px;
+    height: 100px;
+    color: rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+    animation: padlockWobble 3s ease-in-out infinite;
+}
+
+@keyframes padlockWobble {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(8deg);
+    }
+
+    30% {
+        transform: rotate(-6deg);
+    }
+
+    45% {
+        transform: rotate(5deg);
+    }
+
+    60% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    90% {
+        transform: rotate(-1deg);
+    }
+}
+
+.coming-soon-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 6px;
+    text-shadow: 0 0 40px rgba(0, 255, 255, 0.4), 0 0 80px rgba(0, 255, 255, 0.15);
+    margin: 0 0 12px;
+    animation: comingSoonGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes comingSoonGlow {
+    0% {
+        text-shadow: 0 0 40px rgba(0, 255, 255, 0.3), 0 0 80px rgba(0, 255, 255, 0.1);
+    }
+
+    100% {
+        text-shadow: 0 0 60px rgba(0, 255, 255, 0.6), 0 0 120px rgba(0, 255, 255, 0.25);
+    }
+}
+
+.coming-soon-subtext {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    color: #FFD700;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE: Challenges Section
+   ============================================ */
+
+/* Tablet landscape */
+@media (max-width: 1200px) {
+    .challenges-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 900px) {
+    .challenges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .challenge-size {
+        font-size: 1.8rem;
+    }
+
+    .challenge-amount {
+        font-size: 2.2rem;
+    }
+
+    .challenge-card {
+        padding: 24px 16px;
+    }
+
+    .coming-soon-text {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+
+    .pass-challenges-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .pass-challenges-section {
+        padding: 50px 0 70px;
+    }
+
+    .pass-challenges-section .section-title {
+        font-size: 1.4rem;
+    }
+
+    .pass-challenges-subtitle {
+        font-size: 0.85rem;
+        margin-top: -10px;
+        margin-bottom: 24px;
+        padding: 0 16px;
+    }
+
+    .propfirm-compat-banner {
+        padding: 10px 16px;
+        max-width: 90%;
+        gap: 8px;
+        border-radius: 30px;
+    }
+
+    .compat-icon {
+        font-size: 1.1rem;
+    }
+
+    .compat-text {
+        font-size: 0.8rem;
+        letter-spacing: 0;
+    }
+
+    .propfirm-scroll-wrapper {
+        margin-bottom: 30px;
+        padding: 12px 0;
+    }
+
+    .propfirm-logo-item {
+        min-width: 90px;
+        min-height: 70px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        gap: 5px;
+    }
+
+    .propfirm-logo-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .propfirm-logo-item span {
+        font-size: 0.55rem;
+    }
+
+    .propfirm-scroll-track {
+        gap: 12px;
+    }
+
+    .challenges-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 12px;
+    }
+
+    /* Only show the first card on mobile */
+    .challenge-card:nth-child(n+2) {
+        display: none !important;
+    }
+
+    /* Compact section on mobile - centered layout */
+    .pass-challenges-section {
+        padding: 50px 0 60px !important;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: transparent !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    .pass-challenges-section .container {
+        width: 100%;
+    }
+
+    .pass-challenges-section .section-title {
+        margin-bottom: 12px !important;
+    }
+
+    .pass-challenges-subtitle {
+        margin-bottom: 20px !important;
+        font-size: 0.85rem !important;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Hide the prop firm scroll on mobile to be even more compact */
+    .propfirm-compat-banner,
+    .propfirm-scroll-wrapper {
+        display: none !important;
+    }
+
+    /* Coming Soon Overlay perfectly centered for the single card view */
+    .coming-soon-overlay {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(0, 0, 0, 0.75) !important;
+    }
+
+    .coming-soon-content {
+        transform: translateY(-20px);
+    }
+
+    .challenge-card {
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+
+    .challenge-size {
+        font-size: 1.6rem;
+    }
+
+    .challenge-label {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .challenge-amount {
+        font-size: 2rem;
+    }
+
+    .challenge-currency {
+        font-size: 1.1rem;
+    }
+
+    .challenge-usd {
+        font-size: 0.8rem;
+    }
+
+    .challenge-features li {
+        font-size: 0.82rem;
+        padding: 6px 0;
+        gap: 6px;
+    }
+
+    .check-icon {
+        font-size: 0.75rem;
+    }
+
+    .challenge-cart-btn {
+        padding: 10px 16px;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        border-radius: 10px;
+    }
+
+    .challenge-popular-tag,
+    .challenge-premium-tag {
+        font-size: 0.55rem;
+        padding: 3px 12px;
+        letter-spacing: 1.5px;
+    }
+
+    /* Coming Soon Overlay - Mobile */
+    .coming-soon-text {
+        font-size: 1.3rem;
+        letter-spacing: 3px;
+    }
+
+    .coming-soon-subtext {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .padlock-icon {
+        width: 55px;
+        height: 70px;
+    }
+
+    .padlock-container {
+        margin-bottom: 16px;
+    }
+
+    /* Mobile sticky header - fit all 6 links */
+    .mobile-header-nav {
+        gap: 3px !important;
+    }
+
+    .mobile-sticky-header a {
+        font-size: 0.55rem !important;
+        padding: 4px 1px !important;
+    }
+
+    /* Mobile sticky header badge */
+    .mobile-sticky-header .nav-challenges-link::before,
+    .mobile-header-nav .nav-challenges-link::before {
+        top: -7px !important;
+        right: -2px !important;
+        font-size: 0.35rem !important;
+        padding: 1px 3px !important;
+    }
+}
+
+/* Very small Mobile (iPhone SE, etc.) */
+@media (max-width: 380px) {
+    .challenges-grid {
+        max-width: 280px;
+    }
+
+    .challenge-size {
+        font-size: 1.4rem;
+    }
+
+    .challenge-amount {
+        font-size: 1.8rem;
+    }
+
+    .coming-soon-text {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+    .pass-challenges-section .section-title {
+        font-size: 1.2rem;
+    }
+
+    .propfirm-compat-banner {
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 12px;
+    }
+}

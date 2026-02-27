@@ -1,0 +1,285 @@
+/* ============================================
+   FRANK WEB V8 - PREMIUM EFFECTS CSS
+   Ultra-modern visual enhancements
+   ============================================ */
+
+/* ============================================
+   1. ENHANCED GLOW EFFECTS (REDUCED INTENSITY)
+   ============================================ */
+
+/* Neon pulse for headings - SUBTLE VERSION */
+.section-title .glow-text {
+    animation: neonPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow:
+            0 0 5px currentColor,
+            0 0 10px rgba(0, 255, 255, 0.4);
+    }
+
+    to {
+        text-shadow:
+            0 0 8px currentColor,
+            0 0 15px rgba(0, 255, 255, 0.5),
+            0 0 25px rgba(0, 255, 255, 0.2);
+    }
+}
+
+/* ============================================
+   2. PREMIUM BUTTON EFFECTS
+   ============================================ */
+
+/* Efecto de rayo de luz DESACTIVADO */
+
+/* Ripple effect on click */
+.btn,
+.add-to-cart {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ============================================
+   3. PRODUCT CARD ENHANCEMENTS
+   ============================================ */
+
+.product-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 0 60px var(--card-color, rgba(0, 255, 255, 0.3));
+}
+
+/* Gem float animation enhanced */
+.product-gem img {
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card:hover .product-gem img {
+    transform: scale(1.1) translateY(-10px);
+}
+
+/* ============================================
+   4. TESTIMONIAL CARD GLOW
+   ============================================ */
+
+.testimonial-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+}
+
+.testimonial-card:hover {
+    border-color: rgba(0, 255, 255, 0.5);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(0, 255, 255, 0.2),
+        inset 0 0 20px rgba(0, 255, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+/* ============================================
+   5. FAQ ACCORDION ENHANCEMENT
+   ============================================ */
+
+.faq-item {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.faq-item:hover {
+    transform: translateX(5px);
+}
+
+.faq-item.active {
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+}
+
+/* ============================================
+   6. NAVBAR GLASS EFFECT
+   ============================================ */
+
+.navbar {
+    background: rgba(5, 5, 15, 0.85);
+    border-bottom: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(5, 5, 15, 0.95);
+    box-shadow: 0 5px 30px rgba(0, 255, 255, 0.2);
+}
+
+/* ============================================
+   7. LINK HOVER EFFECTS
+   ============================================ */
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FF00FF !important;
+    box-shadow: 0 0 10px #FF00FF;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   8. PLATFORM CARD 3D EFFECT
+   ============================================ */
+
+.platform-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+.platform-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow:
+        0 30px 50px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(0, 255, 255, 0.15);
+}
+
+/* ============================================
+   9. SCROLL INDICATOR
+   ============================================ */
+
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--scroll-progress, 0%);
+    height: 3px;
+    background: #FF00FF;
+    box-shadow: 0 0 10px #FF00FF, 0 0 20px #FF00FF;
+    z-index: 10000;
+    transition: width 0.1s linear;
+}
+
+/* ============================================
+   10. ENHANCED MARQUEE GLOW
+   ============================================ */
+
+.hero-marquee-wrapper {
+    position: relative;
+}
+
+.hero-marquee-wrapper::before,
+.hero-marquee-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.hero-marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.9), transparent);
+}
+
+/* ============================================
+   11. COMPARISON TABLE HOVER
+   ============================================ */
+
+.comparison-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(0, 255, 255, 0.05);
+    transform: scale(1.01);
+}
+
+.comparison-table tbody tr:hover td {
+    color: #fff;
+}
+
+/* ============================================
+   12. TELEGRAM CARD GLOW
+   ============================================ */
+
+.telegram-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.telegram-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(0, 180, 216, 0.3);
+}
+
+/* ============================================
+   13. FOOTER LINK GLOW
+   ============================================ */
+
+.footer-links a,
+.footer-contact a {
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--color-diamond);
+    text-shadow: 0 0 10px var(--color-diamond);
+    padding-left: 10px;
+}
+
+/* ============================================
+   14. VISIBILITY - ALL ELEMENTS VISIBLE
+   ============================================ */
+
+/* All elements visible by default - no hidden states */
+
+/* ============================================
+   15. SMOOTH SCROLL BEHAVIOR
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   16. PREMIUM LOADING ANIMATION
+   ============================================ */
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.loading-shimmer {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}

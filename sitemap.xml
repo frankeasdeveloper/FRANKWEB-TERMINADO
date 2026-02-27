@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://frankeasdeveloper.com/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://frankeasdeveloper.com/LOGOS%20ORIGINALES/ZAFIRO.png</image:loc>
+      <image:title>ZAFIRO EA - Best Trading Robot</image:title>
+      <image:caption>ZAFIRO EA - The best Forex trading robot with 95% FTMO success rate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://frankeasdeveloper.com/LOGOS%20ORIGINALES/EMERALD.png</image:loc>
+      <image:title>EMERALD EA - Premium Trading Robot</image:title>
+      <image:caption>EMERALD EA - Professional trading robot with 75% success rate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://frankeasdeveloper.com/LOGOS%20ORIGINALES/DIAMOND.png</image:loc>
+      <image:title>DIAMOND EA - Economic Trading Robot</image:title>
+      <image:caption>DIAMOND EA - Best value trading robot for beginners</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Products Section (anchor) -->
+  <url>
+    <loc>https://frankeasdeveloper.com/#products</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Comparison Section -->
+  <url>
+    <loc>https://frankeasdeveloper.com/#comparison</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Testimonials Section -->
+  <url>
+    <loc>https://frankeasdeveloper.com/#testimonials</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- FAQ Section -->
+  <url>
+    <loc>https://frankeasdeveloper.com/#faq</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>
