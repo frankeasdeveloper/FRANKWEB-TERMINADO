@@ -10672,7 +10672,8 @@ html:not(.is-scrolling) .community-card {
         width: 28px !important;
         height: 28px !important;
         object-fit: contain !important;
-        margin-top: -4px !important;
+        position: relative !important;
+        top: -10px !important;
     }
 
     /* Network Tags (USDT) */
