@@ -2686,6 +2686,12 @@ border-bottom: 2px solid var(--color-diamond);
     display: flex;
 }
 
+/* PERFORMANCE: Pause ALL background animations when any modal is open */
+body.modal-open *:not(.modal):not(.modal *) {
+    animation-play-state: paused !important;
+    transition: none !important;
+}
+
 .modal-content {
     position: relative;
     background: var(--color-bg-card);

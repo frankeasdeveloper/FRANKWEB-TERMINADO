@@ -238,16 +238,27 @@ function calculateTotal() {
 // ============================================
 
 function openCartModal() {
+    document.body.classList.add('modal-open');
     renderCartItems();
     document.getElementById('cartModal').classList.add('active');
 }
 
 function closeCartModal() {
     document.getElementById('cartModal').classList.remove('active');
+    updateModalOpenClass();
 }
 
 function closeCustomerInfoModal() {
     document.getElementById('customerInfoModal').classList.remove('active');
+    updateModalOpenClass();
+}
+
+// Helper: only remove modal-open if NO modals are active
+function updateModalOpenClass() {
+    requestAnimationFrame(() => {
+        const anyActive = document.querySelector('.modal.active');
+        if (!anyActive) document.body.classList.remove('modal-open');
+    });
 }
 
 function submitCustomerInfo() {
@@ -296,21 +307,19 @@ function closeCheckoutModal() {
     const modal = document.getElementById('checkoutModal');
     const content = document.querySelector('#checkoutModal .checkout-content');
 
-    // Remove active class to close modal
     if (modal) modal.classList.remove('active');
-
-    // Reset expansion state immediately
     if (content) content.classList.remove('expanded');
 
-    // Reset selected payment method
     APP_STATE.selectedPaymentMethod = null;
     document.querySelectorAll('.payment-card').forEach(btn => {
         btn.classList.remove('selected');
     });
+    updateModalOpenClass();
 }
 
 function closeDownloadModal() {
     document.getElementById('downloadModal').classList.remove('active');
+    updateModalOpenClass();
 }
 
 function closeModal(modalId) {
@@ -318,6 +327,7 @@ function closeModal(modalId) {
     if (modal) {
         modal.classList.remove('active');
     }
+    updateModalOpenClass();
 }
 
 function renderCartItems() {
@@ -381,6 +391,7 @@ function proceedToCheckout() {
 
     // Close cart modal and open checkout modal
     closeCartModal();
+    document.body.classList.add('modal-open');
     document.getElementById('checkoutModal').classList.add('active');
 }
 
@@ -506,6 +517,7 @@ function confirmPayment() {
 
     // Close checkout and open customer info modal
     closeCheckoutModal();
+    document.body.classList.add('modal-open');
     document.getElementById('customerInfoModal').classList.add('active');
 }
 
@@ -546,6 +558,7 @@ function showPaymentConfirmedModal() {
         </div>
     `;
 
+    document.body.classList.add('modal-open');
     modal.classList.add('active');
 
     // Launch celebration animation inside the modal
@@ -679,6 +692,7 @@ function showDownloadModal() {
     updateCartBadge();
 
     // Show download modal and launch celebration
+    document.body.classList.add('modal-open');
     document.getElementById('downloadModal').classList.add('active');
     launchConfetti();
 }
