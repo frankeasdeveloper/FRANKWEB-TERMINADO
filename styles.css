@@ -10663,8 +10663,8 @@ html:not(.is-scrolling) .community-card {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        justify-content: flex-start !important;
-        padding-top: 8px !important;
+        justify-content: center !important;
+        padding-top: 0px !important;
         position: relative !important;
     }
 
