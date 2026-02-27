@@ -560,39 +560,39 @@ function showPaymentConfirmedModal() {
 function launchConfettiInModal() {
     const canvas = document.createElement('canvas');
     canvas.id = 'fullscreen-confetti';
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     const W = window.innerWidth;
     const H = window.innerHeight;
-    canvas.width = W;
-    canvas.height = H;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
     canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2147483647;';
     document.documentElement.appendChild(canvas);
     const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
 
     const colors = ['#ff00ff', '#00ff00', '#00ffff', '#ffff00', '#ff6600', '#ff0066', '#66ff00', '#FFD700', '#FF1493', '#00CED1'];
-    const emojis = ['🎈', '🎊', '🎉', '✨', '⭐', '🥳', '🎁', '💎', '🎀', '💫'];
     const centerX = W / 2;
     const centerY = H / 3;
-    const TOTAL = 120;
-    const BURST = 50;
+    const TOTAL = 40;
+    const BURST = 20;
 
     const particles = [];
     for (let i = 0; i < TOTAL; i++) {
         const isBurst = i < BURST;
         const angle = Math.random() * Math.PI * 2;
         const speed = isBurst ? (Math.random() * 5 + 2) : 0;
-        const isEmoji = Math.random() > 0.5;
         particles.push({
             x: isBurst ? centerX : Math.random() * W,
             y: isBurst ? centerY : -(Math.random() * 120 + 20),
             vx: isBurst ? Math.cos(angle) * speed : 0,
             vy: isBurst ? Math.sin(angle) * speed - 3 : Math.random() * 0.5 + 0.5,
-            gravity: 0.06 + Math.random() * 0.03,
-            size: Math.random() * 10 + 5,
+            gravity: 0.08 + Math.random() * 0.04,
+            w: Math.random() * 10 + 4,
+            h: Math.random() * 6 + 3,
             color: colors[Math.floor(Math.random() * colors.length)],
-            emoji: isEmoji ? emojis[Math.floor(Math.random() * emojis.length)] : null,
             rotation: Math.random() * 360,
-            rotSpeed: (Math.random() - 0.5) * 2,
-            delay: isBurst ? 0 : (Math.random() * 1000 + 300),
+            rotSpeed: (Math.random() - 0.5) * 3,
+            delay: isBurst ? 0 : (Math.random() * 600 + 200),
             active: false
         });
     }
@@ -612,31 +612,23 @@ function launchConfettiInModal() {
             if (elapsed < p.delay) { alive = true; continue; }
             if (!p.active) p.active = true;
 
-            // Simple physics: gravity only, no friction, no wobble
             p.vy += p.gravity;
             p.x += p.vx;
             p.y += p.vy;
-            p.vx *= 0.995; // very gentle horizontal decay
+            p.vx *= 0.995;
             p.rotation += p.rotSpeed;
 
-            // Fade out near bottom
             const alpha = p.y > H * 0.5 ? Math.max(0, 1 - (p.y - H * 0.5) / (H * 0.45)) : 1;
             if (alpha <= 0 || p.y > H + 30) continue;
             alive = true;
 
             ctx.globalAlpha = alpha;
-
-            if (p.emoji) {
-                ctx.font = p.size + 'px serif';
-                ctx.fillText(p.emoji, p.x, p.y);
-            } else {
-                ctx.save();
-                ctx.translate(p.x, p.y);
-                ctx.rotate(p.rotation * Math.PI / 180);
-                ctx.fillStyle = p.color;
-                ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
-                ctx.restore();
-            }
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.rotation * Math.PI / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+            ctx.restore();
         }
         ctx.globalAlpha = 1;
 
@@ -654,7 +646,7 @@ function launchConfettiInModal() {
         running = false;
         var c = document.getElementById('fullscreen-confetti');
         if (c) c.remove();
-    }, 10000);
+    }, 5000);
 }
 
 // ============================================
@@ -968,31 +960,31 @@ document.addEventListener('DOMContentLoaded', function () {
 function launchConfetti() {
     const canvas = document.createElement('canvas');
     canvas.id = 'confetti-box';
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     const W = window.innerWidth;
     const H = window.innerHeight;
-    canvas.width = W;
-    canvas.height = H;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
     canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:2147483647;';
     document.body.appendChild(canvas);
     const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
 
     const colors = ['#ff00ff', '#00ff00', '#00ffff', '#ffff00', '#ff6600', '#ff0066', '#66ff00', '#FFD700', '#FF1493'];
-    const emojis = ['🎈', '🎊', '🎉', '✨', '⭐', '🥳', '🎁', '💎', '🎀', '💫'];
 
     const particles = [];
-    for (let i = 0; i < 80; i++) {
-        const isEmoji = Math.random() > 0.5;
+    for (let i = 0; i < 30; i++) {
         particles.push({
             x: Math.random() * W,
-            y: -(Math.random() * 300 + 30),
+            y: -(Math.random() * 200 + 30),
             vy: Math.random() * 1 + 1,
-            gravity: 0.04 + Math.random() * 0.02,
-            size: isEmoji ? (Math.random() * 14 + 14) : (Math.random() * 8 + 5),
+            gravity: 0.06 + Math.random() * 0.03,
+            w: Math.random() * 10 + 4,
+            h: Math.random() * 6 + 3,
             color: colors[Math.floor(Math.random() * colors.length)],
-            emoji: isEmoji ? emojis[Math.floor(Math.random() * emojis.length)] : null,
             rotation: Math.random() * 360,
-            rotSpeed: (Math.random() - 0.5) * 1.5,
-            delay: Math.random() * 2000
+            rotSpeed: (Math.random() - 0.5) * 2,
+            delay: Math.random() * 1200
         });
     }
 
@@ -1018,17 +1010,12 @@ function launchConfetti() {
             alive = true;
 
             ctx.globalAlpha = alpha;
-            if (p.emoji) {
-                ctx.font = p.size + 'px serif';
-                ctx.fillText(p.emoji, p.x, p.y);
-            } else {
-                ctx.save();
-                ctx.translate(p.x, p.y);
-                ctx.rotate(p.rotation * Math.PI / 180);
-                ctx.fillStyle = p.color;
-                ctx.fillRect(-p.size / 2, -p.size * 0.3, p.size, p.size * 0.6);
-                ctx.restore();
-            }
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.rotation * Math.PI / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+            ctx.restore();
         }
         ctx.globalAlpha = 1;
 
@@ -1046,7 +1033,7 @@ function launchConfetti() {
         running = false;
         var c = document.getElementById('confetti-box');
         if (c) c.remove();
-    }, 12000);
+    }, 5000);
 }
 
 // ============================================
