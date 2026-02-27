@@ -9150,7 +9150,7 @@ h1.hero-title .title-line {
 
     /* ---- REVIEWS CAROUSEL ---- */
     .reviews-carousel-vertical {
-        margin-top: -180px !important;
+        margin-top: -130px !important;
         gap: 10px !important;
     }
 
@@ -9384,7 +9384,7 @@ h1.hero-title .title-line {
     /* ---- COMMUNITY / TELEGRAM ---- */
     section.community,
     .community#community {
-        margin-top: -350px !important;
+        margin-top: -200px !important;
     }
 
     section.community .section-title {
