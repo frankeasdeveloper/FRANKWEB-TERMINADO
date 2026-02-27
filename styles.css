@@ -2674,11 +2674,12 @@ border-bottom: 2px solid var(--color-diamond);
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
-    /* REMOVED: backdrop-filter: blur(10px); - GPU KILLER */
     z-index: 2147483646;
     align-items: center;
     justify-content: center;
     padding: var(--spacing-md);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .modal.active {
@@ -2691,23 +2692,27 @@ border-bottom: 2px solid var(--color-diamond);
     border: 2px solid var(--color-diamond);
     border-radius: var(--radius-lg);
     max-width: 440px;
-    /* Reducido 20% (antes 550px) */
     width: 90%;
     max-height: none;
     overflow: visible;
-    box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
-    animation: modalSlideIn 0.3s ease-out;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    animation: modalSlideIn 0.25s ease-out;
+    will-change: transform, opacity;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 @keyframes modalSlideIn {
     from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translate3d(0, -30px, 0);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -2741,7 +2746,7 @@ border-bottom: 2px solid var(--color-diamond);
     font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
     line-height: 1;
     padding: 2px 0 0 0;
     width: 36px;
@@ -2751,13 +2756,14 @@ border-bottom: 2px solid var(--color-diamond);
     justify-content: center;
     border-radius: 50%;
     z-index: 100;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .modal-close:hover {
     background: #ff4444;
     color: white;
     transform: rotate(90deg) scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 68, 68, 0.6);
 }
 
 .modal-body {
@@ -4967,9 +4973,7 @@ img {
 #checkoutModal .checkout-content {
     width: auto;
     max-width: 95vw;
-    /* Start width: Left column only - Reducido 20% */
     min-width: 384px;
-    /* Antes 480px */
     padding: 0 !important;
     background: rgba(8, 8, 12, 0.98);
     border: 2px solid rgba(0, 255, 255, 0.3);
@@ -4978,8 +4982,11 @@ img {
     display: flex;
     flex-direction: column;
     max-height: 90vh;
-    box-shadow: 0 0 80px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 255, 255, 0.3);
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 255, 0.2);
+    transition: min-width 0.4s cubic-bezier(0.25, 1, 0.5, 1), width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: min-width;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Expanded State - Reducido 20% */
@@ -5026,32 +5033,32 @@ img {
 /* Left Column - Always Visible */
 .checkout-left-column {
     flex: 0 0 480px;
-    /* Fixed width */
     padding: 2rem 2.5rem;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
     background: rgba(8, 8, 12, 0.98);
     z-index: 2;
-    transition: all 0.5s ease;
+    transition: flex 0.4s ease, padding 0.4s ease;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Right Column - Hidden initially */
 .checkout-right-column {
     flex: 0 0 0;
-    /* Starte collapsed */
     width: 0;
     opacity: 0;
     padding: 0;
     background: rgba(15, 15, 20, 0.5);
-    /* Slightly different bg */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: flex 0.4s cubic-bezier(0.25, 1, 0.5, 1), width 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease, padding 0.4s ease;
     white-space: nowrap;
-    /* Prevent text wrap during expansion */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 /* Expanded Right Column */
@@ -5113,8 +5120,11 @@ img {
     align-items: center;
     gap: 1rem;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     min-height: 120px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .payment-card.type-btc,
@@ -5126,10 +5136,8 @@ img {
 
 .payment-card img {
     width: 65px;
-    /* Even bigger */
     height: 65px;
     object-fit: contain;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
 }
 
 .network-tag {
