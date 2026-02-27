@@ -10664,7 +10664,7 @@ html:not(.is-scrolling) .community-card {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        padding-top: 0px !important;
+        padding-top: 3px !important;
         position: relative !important;
     }
 
