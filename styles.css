@@ -8600,10 +8600,11 @@ h1.hero-title .title-line {
     /* Reduce space at bottom of comparison section */
     section.comparison,
     .comparison#comparison {
-        padding-bottom: 3rem !important;
+        padding-bottom: 0 !important;
     }
 
     .comparison-notes {
+        display: none !important;
         margin-bottom: 0 !important;
     }
 
