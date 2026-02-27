@@ -9384,7 +9384,7 @@ h1.hero-title .title-line {
     /* ---- COMMUNITY / TELEGRAM ---- */
     section.community,
     .community#community {
-        margin-top: -525px !important;
+        margin-top: -510px !important;
     }
 
     section.community .section-title {
@@ -9479,7 +9479,7 @@ h1.hero-title .title-line {
     body {
         position: relative !important;
         overflow: hidden !important;
-        max-height: 7400px !important;
+        max-height: 8000px !important;
     }
 
     /* Prevenir scroll despuÃ©s del FAQ */
