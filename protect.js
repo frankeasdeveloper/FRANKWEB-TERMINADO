@@ -103,17 +103,21 @@
         });
     } catch (e) { }
 
-    // 6. Debugger trap - triggers breakpoint if DevTools is open
-    (function _dt() {
-        var s = new Date().getTime();
-        debugger;
-        if (new Date().getTime() - s > 100) {
-            // DevTools detected - redirect or blank page
-            document.body.innerHTML = '';
-            document.title = '';
-        }
-        setTimeout(_dt, 3000);
-    })();
+    // 6. Detect DevTools via console timing (non-blocking)
+    var _devToolsOpen = false;
+    var _checkConsole = function () {
+        var start = performance.now();
+        // This trick: console.log with %c causes a tiny delay only when DevTools is open
+        _devToolsOpen = false;
+        var el = new Image();
+        Object.defineProperty(el, 'id', {
+            get: function () {
+                _devToolsOpen = true;
+            }
+        });
+        void (el);
+    };
+    setInterval(_checkConsole, 2000);
 
     // 7. Detect DevTools via window size difference
     var _checkDevTools = function () {

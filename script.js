@@ -586,8 +586,9 @@ function launchConfettiInModal() {
     const colors = ['#ff00ff', '#00ff00', '#00ffff', '#ffff00', '#ff6600', '#ff0066', '#66ff00', '#FFD700', '#FF1493', '#00CED1'];
     const centerX = W / 2;
     const centerY = H / 3;
-    const TOTAL = 40;
-    const BURST = 20;
+    const isMobile = W < 768;
+    const TOTAL = isMobile ? 40 : 80;
+    const BURST = isMobile ? 20 : 35;
 
     const particles = [];
     for (let i = 0; i < TOTAL; i++) {
@@ -987,7 +988,8 @@ function launchConfetti() {
     const colors = ['#ff00ff', '#00ff00', '#00ffff', '#ffff00', '#ff6600', '#ff0066', '#66ff00', '#FFD700', '#FF1493'];
 
     const particles = [];
-    for (let i = 0; i < 30; i++) {
+    const isMobile = W < 768;
+    for (let i = 0; i < (isMobile ? 30 : 50); i++) {
         particles.push({
             x: Math.random() * W,
             y: -(Math.random() * 200 + 30),
