@@ -8043,7 +8043,7 @@ body {
 
     /* Community section - title on one line and moved up */
     section.community {
-        margin-top: 0 !important;
+        margin-top: 50px !important;
         padding-top: 0 !important;
         background: transparent !important;
     }
