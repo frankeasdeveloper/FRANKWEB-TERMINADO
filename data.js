@@ -578,13 +578,14 @@ const FAQ_DATA = [
     { question: 'What is the best time to start the robot?', answer: 'Any time during market hours is fine. The robot will wait for the next setup.' },
 ];
 
-// Wallet Addresses
+// Wallet Addresses (encoded)
+const _d = (s) => atob(s);
 const WALLET_ADDRESSES = {
-    btc: 'bc1qrcvm274nylh8jyy9gc6xwkvekjs7zaljrzak92',
-    eth: '0x25f5cD12064635eA40d71F8766C69E57919a1FC7',
-    usdt_bep20: '0x25f5cD12064635eA40d71F8766C69E57919a1FC7',
-    usdt_erc20: '0x25f5cD12064635eA40d71F8766C69E57919a1FC7',
-    usdt_trc20: 'TNGKYcD6ZhoWsKeZ8E6Z7e7fVAZo7xzsrp'
+    btc: _d('YmMxcXJjdm0yNzRueWxoOGp5eTlnYzZ4d2t2ZWtqczd6YWxqcnphazky'),
+    eth: _d('MHgyNWY1Y0QxMjA2NDYzNWVBNDBkNzFGODc2NkM2OUU1NzkxOWExRkM3'),
+    usdt_bep20: _d('MHgyNWY1Y0QxMjA2NDYzNWVBNDBkNzFGODc2NkM2OUU1NzkxOWExRkM3'),
+    usdt_erc20: _d('MHgyNWY1Y0QxMjA2NDYzNWVBNDBkNzFGODc2NkM2OUU1NzkxOWExRkM3'),
+    usdt_trc20: _d('VE5HS1ljRDZaaG9Xc0tlWjhFNlo3ZTdmVkFabzd4enNycA==')
 };
 
 // Platform Files (Simulated download links)
