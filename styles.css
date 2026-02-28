@@ -2744,7 +2744,7 @@ body.modal-open *:not(.modal):not(.modal *) {
 
 .modal-close {
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 12px;
     background: rgba(255, 50, 50, 0.2);
     border: 2px solid #ff4444;
