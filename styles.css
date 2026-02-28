@@ -7782,33 +7782,33 @@ body {
     #checkoutModal .payment-grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 6px !important;
+        gap: 10px !important;
         justify-items: center !important;
     }
 
     #checkoutModal .payment-card {
         width: 100% !important;
         max-width: none !important;
-        height: 60px !important;
-        min-height: 60px !important;
-        max-height: 60px !important;
+        height: 80px !important;
+        min-height: 80px !important;
+        max-height: 80px !important;
         grid-column: span 1 !important;
-        padding: 4px !important;
+        padding: 8px !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
         position: relative !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 20px !important;
         gap: 0 !important;
         overflow: visible !important;
     }
 
     #checkoutModal .payment-card img {
-        width: 40px !important;
-        height: 40px !important;
-        max-width: 40px !important;
-        max-height: 40px !important;
+        width: 60px !important;
+        height: 60px !important;
+        max-width: 60px !important;
+        max-height: 60px !important;
     }
 
     #checkoutModal .network-tag {
@@ -7836,9 +7836,9 @@ body {
         position: relative !important;
         z-index: 100 !important;
         box-shadow: none !important;
-        width: 140px !important;
-        height: 140px !important;
-        margin: -10px auto 0 auto !important;
+        width: 180px !important;
+        height: 180px !important;
+        margin: -30px auto 0 auto !important;
     }
 
     #checkoutModal .qr-glow-frame img {
@@ -7940,11 +7940,10 @@ body {
         flex-direction: row !important;
         align-items: center !important;
         justify-content: center !important;
-        padding: 8px 10px !important;
-        gap: 10px !important;
-        max-width: 300px !important;
+        padding: 10px 15px !important;
+        gap: 15px !important;
+        max-width: 340px !important;
         margin: 0 auto !important;
-        height: 40px !important;
     }
 
     #checkoutModal .address-container code {
@@ -9606,6 +9605,57 @@ h1.hero-title .title-line {
     section.comparison,
     .comparison {
         margin-bottom: -110px !important;
+    }
+
+    /* ---- CHECKOUT MODAL - iPhone 14 Pro specific (≤414px) ---- */
+    #checkoutModal .payment-grid {
+        gap: 5px !important;
+    }
+
+    #checkoutModal .payment-card {
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 60px !important;
+        padding: 4px !important;
+        margin-bottom: 8px !important;
+    }
+
+    #checkoutModal .payment-card img {
+        width: 35px !important;
+        height: 35px !important;
+        max-width: 35px !important;
+        max-height: 35px !important;
+    }
+
+    #checkoutModal .network-tag {
+        font-size: 0.55rem !important;
+        padding: 1px 5px !important;
+    }
+
+    #checkoutModal .payment-label {
+        font-size: 0.5rem !important;
+    }
+
+    #checkoutModal .qr-glow-frame {
+        width: 140px !important;
+        height: 140px !important;
+        margin: -10px auto 0 auto !important;
+    }
+
+    #checkoutModal .address-container {
+        max-width: 280px !important;
+        height: 38px !important;
+        padding: 6px 8px !important;
+        gap: 8px !important;
+    }
+
+    #checkoutModal .address-container code {
+        font-size: 0.8rem !important;
+    }
+
+    #checkoutModal .copy-tab-btn {
+        font-size: 0.7rem !important;
+        padding: 6px 12px !important;
     }
 
     /* ---- SOLICITAR ENLACE BUTTON ---- */
