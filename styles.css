@@ -2756,7 +2756,7 @@ body.modal-open *:not(.modal):not(.modal *) {
     cursor: pointer;
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
     line-height: 1;
-    padding: 2px 0 0 0;
+    padding: 0;
     width: 36px;
     height: 36px;
     display: flex;
