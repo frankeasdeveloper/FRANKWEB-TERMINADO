@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    FRANK EAs DEVELOPER - CYBERPUNK THEME
    ============================================ */
 
@@ -7849,6 +7849,10 @@ body {
 
     #checkoutModal .checkout-content.expanded .checkout-right-column {
         padding: 0 !important;
+        min-width: unset !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
     }
 
     #checkoutModal .qr-glow-frame::before,
@@ -7858,6 +7862,14 @@ body {
 
     #checkoutModal .checkout-content {
         overflow: hidden !important;
+    }
+
+    #checkoutModal .checkout-content.expanded {
+        min-width: unset !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
     }
 
     #checkoutModal .payment-grid {
