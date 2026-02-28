@@ -5038,9 +5038,10 @@ img {
 
 /* Left Column - Always Visible */
 .checkout-left-column {
-    flex: 0 0 480px;
+    flex: 1;
+    min-width: 480px;
     padding: 2rem 2.5rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: none;
     background: rgba(8, 8, 12, 0.98);
     z-index: 2;
     transition: flex 0.4s ease, padding 0.4s ease;
@@ -5065,6 +5066,11 @@ img {
     white-space: nowrap;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+}
+
+#checkoutModal .checkout-content.expanded .checkout-left-column {
+    flex: 0 0 480px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Expanded Right Column */
