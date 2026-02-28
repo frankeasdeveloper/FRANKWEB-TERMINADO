@@ -5083,6 +5083,20 @@ img {
     min-width: 420px;
 }
 
+/* Desktop: show full wallet address without truncation */
+@media (min-width: 901px) {
+    #checkoutModal .checkout-content.expanded .address-container {
+        max-width: none !important;
+    }
+
+    #checkoutModal .checkout-content.expanded .address-container code {
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+}
+
 /* 1. Order Summary Bar */
 .checkout-summary-bar {
     display: flex;
