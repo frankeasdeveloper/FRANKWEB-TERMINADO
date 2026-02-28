@@ -5090,10 +5090,14 @@ img {
     }
 
     #checkoutModal .checkout-content.expanded .address-container code {
-        font-size: 0.8rem !important;
+        font-size: 0.95rem !important;
         white-space: nowrap !important;
         overflow: visible !important;
         text-overflow: unset !important;
+        text-align: center !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 }
 
