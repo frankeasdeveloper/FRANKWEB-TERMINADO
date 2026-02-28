@@ -2740,6 +2740,8 @@ body.modal-open *:not(.modal):not(.modal *) {
 .modal-header .modal-close {
     position: static;
     flex-shrink: 0;
+    align-self: center;
+    margin-top: -5px;
 }
 
 .modal-close {
