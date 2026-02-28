@@ -7753,7 +7753,8 @@ body {
         max-width: none !important;
         min-width: unset !important;
         padding: 10px !important;
-        transform: none !important;
+        transform: scale(0.92) !important;
+        transform-origin: center center !important;
         margin: auto !important;
         overflow-y: auto !important;
         max-height: 90vh !important;
