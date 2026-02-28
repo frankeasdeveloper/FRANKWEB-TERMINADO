@@ -5275,19 +5275,20 @@ img {
     background: rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    /* Slightly squarer */
     overflow: hidden;
-    height: 65px;
+    height: 50px;
+    max-width: 90%;
+    margin: 0 auto;
     position: relative;
 }
 
 .address-container code {
     flex: 1;
     font-family: 'Courier New', monospace;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.95);
     padding: 0 1.5rem;
-    line-height: 65px;
+    line-height: 50px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
