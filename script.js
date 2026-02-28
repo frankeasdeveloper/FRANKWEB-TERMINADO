@@ -492,8 +492,9 @@ function selectPaymentMethod(method, selectedBtn) {
     if (config) {
         if (walletAddressElement) {
             const addr = config.address;
-            // Truncate address: First 10 and last 8 characters with ...
-            const truncated = addr.length > 20 ? `${addr.substring(0, 10)}...${addr.substring(addr.length - 8)}` : addr;
+            // Show full address on desktop, truncate on mobile
+            const isMobile = window.innerWidth <= 900;
+            const truncated = isMobile && addr.length > 20 ? `${addr.substring(0, 10)}...${addr.substring(addr.length - 8)}` : addr;
             walletAddressElement.textContent = truncated;
             walletAddressElement.dataset.fullAddress = addr; // Store full address for copying
         }

@@ -5266,7 +5266,7 @@ img {
 .address-container code {
     flex: 1;
     font-family: 'Courier New', monospace;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.95);
     padding: 0 1.5rem;
     line-height: 65px;
