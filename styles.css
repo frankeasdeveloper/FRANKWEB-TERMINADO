@@ -4977,7 +4977,7 @@ img {
 
 /* Modal Content - Dynamic Width */
 #checkoutModal .checkout-content {
-    width: auto;
+    width: fit-content;
     max-width: 95vw;
     min-width: 384px;
     padding: 0 !important;
