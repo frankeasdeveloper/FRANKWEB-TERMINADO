@@ -11397,9 +11397,9 @@ html:not(.is-scrolling) .community-card {
         padding: 12px 15px !important;
     }
 
-    /* Compact summary bar */
+    /* Compact summary bar - push text inward */
     #checkoutModal .checkout-summary-bar {
-        padding: 3px 8px !important;
+        padding: 5px 25px !important;
         min-height: auto !important;
         height: auto !important;
         margin: 5px !important;
