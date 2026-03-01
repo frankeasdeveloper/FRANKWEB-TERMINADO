@@ -11311,4 +11311,33 @@ html:not(.is-scrolling) .community-card {
         font-size: 1.1rem !important;
         font-weight: 800 !important;
     }
+
+    /* Payment cards: smaller and more square */
+    #checkoutModal .payment-grid {
+        gap: 8px !important;
+        width: 85% !important;
+        margin: 0 auto !important;
+    }
+
+    #checkoutModal .payment-card {
+        width: 90px !important;
+        height: 70px !important;
+        min-height: 70px !important;
+        max-height: 70px !important;
+        max-width: 90px !important;
+        padding: 4px !important;
+        margin: 0 0 8px 0 !important;
+    }
+
+    #checkoutModal .payment-card img {
+        width: 32px !important;
+        height: 32px !important;
+        max-width: 32px !important;
+        max-height: 32px !important;
+    }
+
+    #checkoutModal .payment-card:nth-child(4),
+    #checkoutModal .payment-card:nth-child(5) {
+        justify-self: center !important;
+    }
 }
