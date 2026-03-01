@@ -9624,6 +9624,21 @@ h1.hero-title .title-line {
     #checkoutModal .checkout-summary-bar {
         margin-left: 5px !important;
         margin-right: 5px !important;
+        padding: 3px 8px !important;
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    #checkoutModal .checkout-summary-bar .summary-item {
+        padding: 2px 0 !important;
+    }
+
+    #checkoutModal .checkout-summary-bar .summary-item .label {
+        font-size: 0.7rem !important;
+    }
+
+    #checkoutModal .checkout-summary-bar .summary-item .value {
+        font-size: 0.85rem !important;
     }
 
     /* Payment cards: more square, narrower */
@@ -9643,6 +9658,12 @@ h1.hero-title .title-line {
         padding: 4px !important;
         margin-bottom: 8px !important;
         box-sizing: border-box !important;
+    }
+
+    /* BTC and ETH: always second row, centered */
+    #checkoutModal .payment-card:nth-child(4),
+    #checkoutModal .payment-card:nth-child(5) {
+        justify-self: center !important;
     }
 
     #checkoutModal .payment-card img {
