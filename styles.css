@@ -7861,7 +7861,7 @@ body {
     }
 
     #checkoutModal .checkout-content {
-        overflow: hidden !important;
+        overflow: visible !important;
     }
 
     #checkoutModal .checkout-content.expanded {
@@ -7894,7 +7894,7 @@ body {
         width: 100% !important;
         margin-top: -10px !important;
         max-width: 100% !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
 
     #checkoutModal .checkout-content.expanded .qr-glow-frame {
