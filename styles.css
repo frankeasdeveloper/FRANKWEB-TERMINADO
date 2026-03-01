@@ -11372,6 +11372,7 @@ html:not(.is-scrolling) .community-card {
         max-width: 90px !important;
         max-height: 70px !important;
         align-self: center !important;
+        margin-top: -10px !important;
     }
 
     /* Prevent parents from clipping the carousel */
