@@ -11415,14 +11415,14 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .checkout-summary-bar .summary-item:first-child,
     #checkoutModal .summary-item:first-child {
         text-align: right !important;
-        padding-left: 30px !important;
+        padding-left: 50px !important;
     }
 
     /* Order: push left, bigger */
     #checkoutModal .checkout-summary-bar .summary-item:last-child,
     #checkoutModal .summary-item:last-child {
         text-align: left !important;
-        padding-right: 30px !important;
+        padding-right: 50px !important;
     }
 
     #checkoutModal .checkout-summary-bar .summary-item .label,
