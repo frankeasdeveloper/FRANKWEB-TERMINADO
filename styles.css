@@ -11277,23 +11277,17 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .modal-content,
     #cartModal .modal-content {
         transform: scale(0.82) !important;
-        transform-origin: center top !important;
-        margin-top: 30px !important;
+        transform-origin: center center !important;
         max-height: 95vh !important;
         overflow: visible !important;
         animation: none !important;
         transition: none !important;
     }
 
-    #checkoutModal .checkout-content.expanded {
-        margin-top: 60px !important;
-    }
-
     #customerInfoModal .modal-content,
     .modal#customerInfoModal .modal-content {
         transform: scale(0.72) !important;
         transform-origin: center center !important;
-        margin-top: 50px !important;
         max-height: none !important;
         min-height: 600px !important;
         height: auto !important;
