@@ -11445,7 +11445,9 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .address-container {
         height: auto !important;
         min-height: 50px !important;
-        max-width: 85% !important;
+        max-width: none !important;
+        width: auto !important;
+        margin: 0 30px !important;
     }
 
     #checkoutModal .address-container code {
@@ -11635,7 +11637,9 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .address-container {
         height: auto !important;
         min-height: 50px !important;
-        max-width: 85% !important;
+        max-width: none !important;
+        width: auto !important;
+        margin: 0 30px !important;
     }
 
     #checkoutModal .address-container code {
