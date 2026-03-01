@@ -11488,4 +11488,21 @@ html:not(.is-scrolling) .community-card {
         align-items: center !important;
         justify-content: center !important;
     }
+
+    /* Taller modal to fit confirm button */
+    #checkoutModal .modal-content {
+        max-height: 92vh !important;
+    }
+
+    #checkoutModal .checkout-content.expanded {
+        overflow-y: auto !important;
+        max-height: 85vh !important;
+    }
+
+    #checkoutModal #confirmPayment {
+        display: block !important;
+        margin: 5px auto 10px auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 }
