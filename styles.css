@@ -11312,21 +11312,40 @@ html:not(.is-scrolling) .community-card {
         font-weight: 800 !important;
     }
 
-    /* Payment cards: smaller and more square */
+    /* Payment cards: horizontal carousel */
     #checkoutModal .payment-grid {
-        gap: 8px !important;
-        width: 85% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        gap: 10px !important;
+        width: 100% !important;
         margin: 0 auto !important;
+        padding: 5px 15px !important;
+        box-sizing: border-box !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
+        scrollbar-width: none !important;
+        grid-template-columns: none !important;
+    }
+
+    #checkoutModal .payment-grid::-webkit-scrollbar {
+        display: none !important;
     }
 
     #checkoutModal .payment-card {
+        flex: 0 0 90px !important;
         width: 90px !important;
         height: 70px !important;
+        min-width: 90px !important;
         min-height: 70px !important;
-        max-height: 70px !important;
         max-width: 90px !important;
+        max-height: 70px !important;
         padding: 4px !important;
-        margin: 0 0 8px 0 !important;
+        margin: 0 !important;
+        scroll-snap-align: start !important;
+        grid-column: unset !important;
     }
 
     #checkoutModal .payment-card img {
@@ -11338,6 +11357,6 @@ html:not(.is-scrolling) .community-card {
 
     #checkoutModal .payment-card:nth-child(4),
     #checkoutModal .payment-card:nth-child(5) {
-        justify-self: center !important;
+        justify-self: unset !important;
     }
 }
