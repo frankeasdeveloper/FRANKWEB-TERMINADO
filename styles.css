@@ -11322,7 +11322,7 @@ html:not(.is-scrolling) .community-card {
         gap: 10px !important;
         width: calc(100% - 10px) !important;
         margin: 0 auto !important;
-        padding: 8px 30px !important;
+        padding: 8px 50px !important;
         box-sizing: border-box !important;
         -webkit-overflow-scrolling: touch !important;
         scroll-snap-type: x mandatory !important;
