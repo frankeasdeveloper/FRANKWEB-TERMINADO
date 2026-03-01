@@ -11394,31 +11394,25 @@ html:not(.is-scrolling) .community-card {
     }
 
     #checkoutModal .modal-header {
-        padding: 8px 15px !important;
+        padding: 12px 15px !important;
     }
 
-    /* Compact summary bar - push text inward */
+    /* Summary bar - text pushed inward */
     #checkoutModal .checkout-summary-bar {
-        padding: 3px 15px !important;
+        padding: 5px 15px !important;
         min-height: auto !important;
         height: auto !important;
-        margin: 2px 5px !important;
+        margin: 5px !important;
         display: flex !important;
         justify-content: space-between !important;
     }
 
-    #checkoutModal .checkout-summary-bar .summary-item {
-        padding: 2px 0 !important;
-    }
-
-    /* Price: push right, bigger */
     #checkoutModal .checkout-summary-bar .summary-item:first-child,
     #checkoutModal .summary-item:first-child {
         text-align: right !important;
         padding-left: 50px !important;
     }
 
-    /* Order: push left, bigger */
     #checkoutModal .checkout-summary-bar .summary-item:last-child,
     #checkoutModal .summary-item:last-child {
         text-align: left !important;
@@ -11436,7 +11430,7 @@ html:not(.is-scrolling) .community-card {
         font-weight: 800 !important;
     }
 
-    /* Payment cards: HORIZONTAL CAROUSEL */
+    /* Payment cards: HORIZONTAL CAROUSEL with scroll */
     #checkoutModal .payment-grid {
         display: flex !important;
         flex-direction: row !important;
@@ -11478,7 +11472,6 @@ html:not(.is-scrolling) .community-card {
         max-height: 30px !important;
     }
 
-    /* Remove centering rules for carousel */
     #checkoutModal .payment-card:nth-child(4),
     #checkoutModal .payment-card:nth-child(5) {
         justify-self: unset !important;
@@ -11499,64 +11492,14 @@ html:not(.is-scrolling) .community-card {
         right: 20px !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
-        width: 30px !important;
-        height: 30px !important;
-        font-size: 1.1rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
     }
 
-    /* Taller modal - everything must fit without scroll */
-    #checkoutModal .modal-content {
-        max-height: 98vh !important;
-        overflow-y: auto !important;
-    }
-
-    #checkoutModal .checkout-content.expanded {
-        overflow: visible !important;
-        max-height: none !important;
-    }
-
-    /* Compact QR - move up */
-    #checkoutModal .qr-glow-frame {
-        width: 110px !important;
-        height: 110px !important;
-        margin: -25px auto -10px auto !important;
-    }
-
-    /* Compact expanded right column */
-    #checkoutModal .checkout-content.expanded .checkout-right-column,
-    #checkoutModal .checkout-content.expanded .qr-wrapper {
-        margin-top: -30px !important;
-    }
-
-    /* Compact address container */
-    #checkoutModal .address-container {
-        max-width: 260px !important;
-        height: 32px !important;
-        padding: 3px 8px !important;
-        gap: 6px !important;
-        margin-top: -15px !important;
-    }
-
-    #checkoutModal .address-container code {
-        font-size: 0.75rem !important;
-    }
-
-    #checkoutModal .copy-tab-btn {
-        font-size: 0.65rem !important;
-        padding: 4px 10px !important;
-    }
-
-    /* Confirm button - always visible at bottom */
+    /* Confirm button */
     #checkoutModal #confirmPayment,
     #checkoutModal .checkout-body button[id="confirmPayment"] {
         display: block !important;
-        margin: -10px auto 5px auto !important;
+        margin: 5px auto 10px auto !important;
         visibility: visible !important;
         opacity: 1 !important;
-        position: relative !important;
-        z-index: 200 !important;
     }
 }
