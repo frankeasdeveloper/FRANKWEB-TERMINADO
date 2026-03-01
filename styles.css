@@ -11436,34 +11436,52 @@ html:not(.is-scrolling) .community-card {
         font-weight: 800 !important;
     }
 
-    /* Payment cards: narrower, more square */
+    /* Payment cards: HORIZONTAL CAROUSEL */
     #checkoutModal .payment-grid {
-        gap: 8px !important;
-        width: 85% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        gap: 10px !important;
+        width: 100% !important;
         margin: 0 auto !important;
+        padding: 5px 15px !important;
+        box-sizing: border-box !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
+        scrollbar-width: none !important;
+    }
+
+    #checkoutModal .payment-grid::-webkit-scrollbar {
+        display: none !important;
     }
 
     #checkoutModal .payment-card {
-        width: 85px !important;
-        height: 55px !important;
-        min-height: 55px !important;
-        max-height: 55px !important;
-        max-width: 85px !important;
-        padding: 3px !important;
-        margin: 0 0 5px 0 !important;
+        flex: 0 0 70px !important;
+        width: 70px !important;
+        height: 70px !important;
+        min-width: 70px !important;
+        min-height: 70px !important;
+        max-width: 70px !important;
+        max-height: 70px !important;
+        padding: 4px !important;
+        margin: 0 !important;
+        scroll-snap-align: start !important;
+        grid-column: unset !important;
     }
 
     #checkoutModal .payment-card img {
-        width: 28px !important;
-        height: 28px !important;
-        max-width: 28px !important;
-        max-height: 28px !important;
+        width: 30px !important;
+        height: 30px !important;
+        max-width: 30px !important;
+        max-height: 30px !important;
     }
 
-    /* BTC and ETH: centered on second row */
+    /* Remove centering rules for carousel */
     #checkoutModal .payment-card:nth-child(4),
     #checkoutModal .payment-card:nth-child(5) {
-        justify-self: center !important;
+        justify-self: unset !important;
     }
 
     #checkoutModal .network-tag {
