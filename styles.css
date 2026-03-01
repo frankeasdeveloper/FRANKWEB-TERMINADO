@@ -11276,12 +11276,6 @@ html:not(.is-scrolling) .community-card {
    ============================================ */
 @media (min-width: 415px) and (max-width: 430px) {
 
-    /* Scale down mobile sticky header proportionally */
-    .mobile-sticky-header {
-        transform: scale(0.95) !important;
-        transform-origin: center top !important;
-    }
-
     /* Force center ALL modals */
     .modal.active {
         display: flex !important;
