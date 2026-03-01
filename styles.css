@@ -11284,6 +11284,15 @@ html:not(.is-scrolling) .community-card {
         transition: none !important;
     }
 
+    #customerInfoModal .modal-content {
+        transform: scale(0.78) !important;
+        transform-origin: center top !important;
+        max-height: none !important;
+        overflow: visible !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
     /* Summary bar text - pushed inward and bigger */
     #checkoutModal .checkout-summary-bar {
         padding: 5px 15px !important;
