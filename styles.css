@@ -11488,41 +11488,10 @@ html:not(.is-scrolling) .community-card {
         font-size: 1.1rem !important;
     }
 
-    /* Scale down mobile sticky header */
+    /* Scale down mobile sticky header proportionally */
     .mobile-sticky-header {
-        padding: 6px 4px !important;
-        overflow: visible !important;
-    }
-
-    .mobile-sticky-header a {
-        font-size: 0.5rem !important;
-        padding: 2px 1px !important;
-    }
-
-    .mobile-header-nav {
-        gap: 3px !important;
-        overflow: visible !important;
-    }
-
-    .mobile-header-icons {
-        gap: 3px !important;
-        margin-left: 3px !important;
-        flex-shrink: 0 !important;
-        overflow: visible !important;
-    }
-
-    .mobile-lang-btn,
-    .mobile-cart-btn {
-        width: 18px !important;
-        height: 18px !important;
-        min-width: 18px !important;
-        flex-shrink: 0 !important;
-    }
-
-    .mobile-lang-btn svg,
-    .mobile-cart-btn svg {
-        width: 14px !important;
-        height: 14px !important;
+        transform: scale(0.88) !important;
+        transform-origin: center top !important;
     }
 
     /* Force center ALL modals */
