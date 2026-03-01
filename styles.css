@@ -7861,7 +7861,7 @@ body {
     }
 
     #checkoutModal .checkout-content {
-        overflow: visible !important;
+        overflow: hidden !important;
     }
 
     #checkoutModal .checkout-content.expanded {
@@ -7894,7 +7894,7 @@ body {
         width: 100% !important;
         margin-top: -10px !important;
         max-width: 100% !important;
-        overflow: visible !important;
+        overflow: hidden !important;
     }
 
     #checkoutModal .checkout-content.expanded .qr-glow-frame {
@@ -9641,7 +9641,46 @@ h1.hero-title .title-line {
         font-size: 0.85rem !important;
     }
 
-    /* Payment cards: handled by HORIZONTAL CAROUSEL at end of file */
+    /* Payment cards: more square, narrower */
+    #checkoutModal .payment-grid {
+        gap: 8px !important;
+        width: 85% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    #checkoutModal .payment-card {
+        width: 90px !important;
+        height: 70px !important;
+        min-height: 70px !important;
+        max-height: 70px !important;
+        max-width: 90px !important;
+        padding: 4px !important;
+        margin-bottom: 8px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* BTC and ETH: always second row, centered */
+    #checkoutModal .payment-card:nth-child(4),
+    #checkoutModal .payment-card:nth-child(5) {
+        justify-self: center !important;
+    }
+
+    #checkoutModal .payment-card img {
+        width: 32px !important;
+        height: 32px !important;
+        max-width: 32px !important;
+        max-height: 32px !important;
+    }
+
+    #checkoutModal .network-tag {
+        font-size: 0.5rem !important;
+        padding: 1px 4px !important;
+    }
+
+    #checkoutModal .payment-label {
+        font-size: 0.45rem !important;
+    }
 
     #checkoutModal .qr-glow-frame {
         width: 140px !important;
@@ -11358,7 +11397,7 @@ html:not(.is-scrolling) .community-card {
         padding: 12px 15px !important;
     }
 
-    /* Summary bar - text pushed inward */
+    /* Compact summary bar - push text inward */
     #checkoutModal .checkout-summary-bar {
         padding: 5px 15px !important;
         min-height: auto !important;
@@ -11368,12 +11407,18 @@ html:not(.is-scrolling) .community-card {
         justify-content: space-between !important;
     }
 
+    #checkoutModal .checkout-summary-bar .summary-item {
+        padding: 2px 0 !important;
+    }
+
+    /* Price: push right, bigger */
     #checkoutModal .checkout-summary-bar .summary-item:first-child,
     #checkoutModal .summary-item:first-child {
         text-align: right !important;
         padding-left: 50px !important;
     }
 
+    /* Order: push left, bigger */
     #checkoutModal .checkout-summary-bar .summary-item:last-child,
     #checkoutModal .summary-item:last-child {
         text-align: left !important;
@@ -11391,7 +11436,7 @@ html:not(.is-scrolling) .community-card {
         font-weight: 800 !important;
     }
 
-    /* Payment cards: HORIZONTAL CAROUSEL with scroll */
+    /* Payment cards: HORIZONTAL CAROUSEL */
     body #checkoutModal .payment-grid {
         display: flex !important;
         flex-direction: row !important;
@@ -11446,22 +11491,5 @@ html:not(.is-scrolling) .community-card {
 
     body #checkoutModal .payment-label {
         font-size: 0.45rem !important;
-    }
-
-    /* Close button: centered within header */
-    #checkoutModal .modal-close,
-    #cartModal .modal-close {
-        right: 20px !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-    }
-
-    /* Confirm button */
-    #checkoutModal #confirmPayment,
-    #checkoutModal .checkout-body button[id="confirmPayment"] {
-        display: block !important;
-        margin: 5px auto 10px auto !important;
-        visibility: visible !important;
-        opacity: 1 !important;
     }
 }
