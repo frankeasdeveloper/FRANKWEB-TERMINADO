@@ -11284,14 +11284,23 @@ html:not(.is-scrolling) .community-card {
         transition: none !important;
     }
 
-    #customerInfoModal .modal-content {
+    #customerInfoModal .modal-content,
+    .modal#customerInfoModal .modal-content {
         transform: scale(0.72) !important;
         transform-origin: center top !important;
         max-height: none !important;
         min-height: 600px !important;
+        height: auto !important;
         overflow: visible !important;
+        overflow-y: visible !important;
         animation: none !important;
         transition: none !important;
+    }
+
+    #customerInfoModal .modal-body {
+        overflow: visible !important;
+        overflow-y: visible !important;
+        max-height: none !important;
     }
 
     /* Summary bar text - pushed inward and bigger */
