@@ -11440,6 +11440,25 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .payment-card:active {
         transform: translateY(-3px) !important;
     }
+
+    /* Wallet address: show full text */
+    #checkoutModal .address-container {
+        height: auto !important;
+        min-height: 50px !important;
+        max-width: 95% !important;
+    }
+
+    #checkoutModal .address-container code {
+        white-space: normal !important;
+        word-break: break-all !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        font-size: 0.6rem !important;
+        line-height: 1.4 !important;
+        padding: 8px 10px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
 }
 
 /* ============================================
@@ -11610,5 +11629,24 @@ html:not(.is-scrolling) .community-card {
     /* Card under finger lifts while touching */
     #checkoutModal .payment-card:active {
         transform: translateY(-3px) !important;
+    }
+
+    /* Wallet address: show full text */
+    #checkoutModal .address-container {
+        height: auto !important;
+        min-height: 50px !important;
+        max-width: 95% !important;
+    }
+
+    #checkoutModal .address-container code {
+        white-space: normal !important;
+        word-break: break-all !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        font-size: 0.55rem !important;
+        line-height: 1.4 !important;
+        padding: 8px 10px !important;
+        display: flex !important;
+        align-items: center !important;
     }
 }
