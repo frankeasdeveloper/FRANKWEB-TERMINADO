@@ -11474,4 +11474,18 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .payment-label {
         font-size: 0.45rem !important;
     }
+
+    /* Close button: centered within header */
+    #checkoutModal .modal-close,
+    #cartModal .modal-close {
+        right: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 1.1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
 }
