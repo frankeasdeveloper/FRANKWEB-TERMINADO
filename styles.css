@@ -11279,7 +11279,6 @@ html:not(.is-scrolling) .community-card {
         transform: scale(0.82) !important;
         transform-origin: center top !important;
         max-height: 95vh !important;
-        overflow-y: auto !important;
     }
 
     /* Summary bar text - pushed inward and bigger */
