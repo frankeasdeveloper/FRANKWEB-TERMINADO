@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    FRANK EAs DEVELOPER - CYBERPUNK THEME
    ============================================ */
 
@@ -7849,10 +7849,6 @@ body {
 
     #checkoutModal .checkout-content.expanded .checkout-right-column {
         padding: 0 !important;
-        min-width: unset !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
     }
 
     #checkoutModal .qr-glow-frame::before,
@@ -7861,15 +7857,7 @@ body {
     }
 
     #checkoutModal .checkout-content {
-        overflow: hidden !important;
-    }
-
-    #checkoutModal .checkout-content.expanded {
-        min-width: unset !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
+        overflow: visible !important;
     }
 
     #checkoutModal .payment-grid {
@@ -7892,9 +7880,7 @@ body {
         position: relative !important;
         z-index: 100 !important;
         width: 100% !important;
-        margin-top: -10px !important;
-        max-width: 100% !important;
-        overflow: hidden !important;
+        margin-top: -20px !important;
     }
 
     #checkoutModal .checkout-content.expanded .qr-glow-frame {
@@ -9607,103 +9593,6 @@ h1.hero-title .title-line {
         margin-bottom: -110px !important;
     }
 
-    /* ---- CHECKOUT MODAL - iPhone 14 Pro specific (≤414px) ---- */
-    /* Add inner padding so content doesn't touch modal edges */
-    #checkoutModal .checkout-left-column {
-        padding: 15px !important;
-    }
-
-    #checkoutModal .checkout-body {
-        padding: 0 10px !important;
-    }
-
-    #checkoutModal .modal-header {
-        padding: 12px 15px !important;
-    }
-
-    #checkoutModal .checkout-summary-bar {
-        margin-left: 5px !important;
-        margin-right: 5px !important;
-        padding: 3px 8px !important;
-        min-height: auto !important;
-        height: auto !important;
-    }
-
-    #checkoutModal .checkout-summary-bar .summary-item {
-        padding: 2px 0 !important;
-    }
-
-    #checkoutModal .checkout-summary-bar .summary-item .label {
-        font-size: 0.7rem !important;
-    }
-
-    #checkoutModal .checkout-summary-bar .summary-item .value {
-        font-size: 0.85rem !important;
-    }
-
-    /* Payment cards: more square, narrower */
-    #checkoutModal .payment-grid {
-        gap: 8px !important;
-        width: 85% !important;
-        margin: 0 auto !important;
-        box-sizing: border-box !important;
-    }
-
-    #checkoutModal .payment-card {
-        width: 90px !important;
-        height: 70px !important;
-        min-height: 70px !important;
-        max-height: 70px !important;
-        max-width: 90px !important;
-        padding: 4px !important;
-        margin-bottom: 8px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* BTC and ETH: always second row, centered */
-    #checkoutModal .payment-card:nth-child(4),
-    #checkoutModal .payment-card:nth-child(5) {
-        justify-self: center !important;
-    }
-
-    #checkoutModal .payment-card img {
-        width: 32px !important;
-        height: 32px !important;
-        max-width: 32px !important;
-        max-height: 32px !important;
-    }
-
-    #checkoutModal .network-tag {
-        font-size: 0.5rem !important;
-        padding: 1px 4px !important;
-    }
-
-    #checkoutModal .payment-label {
-        font-size: 0.45rem !important;
-    }
-
-    #checkoutModal .qr-glow-frame {
-        width: 140px !important;
-        height: 140px !important;
-        margin: -10px auto 0 auto !important;
-    }
-
-    #checkoutModal .address-container {
-        max-width: 280px !important;
-        height: 38px !important;
-        padding: 6px 8px !important;
-        gap: 8px !important;
-    }
-
-    #checkoutModal .address-container code {
-        font-size: 0.8rem !important;
-    }
-
-    #checkoutModal .copy-tab-btn {
-        font-size: 0.7rem !important;
-        padding: 6px 12px !important;
-    }
-
     /* ---- SOLICITAR ENLACE BUTTON ---- */
     .btn-request-link {
         padding: 12px 35px !important;
@@ -11375,103 +11264,5 @@ html:not(.is-scrolling) .community-card {
 
     .frank-notification.visible {
         transform: translateX(-50%) translateY(0) !important;
-    }
-}
-
-/* ============================================
-   IPHONE 14 PRO (≤414px) - FINAL OVERRIDES
-   Must be at the very end to win specificity
-   ============================================ */
-@media (max-width: 414px) {
-
-    /* Inner padding so nothing touches modal edges */
-    #checkoutModal .checkout-left-column {
-        padding: 15px !important;
-    }
-
-    #checkoutModal .checkout-body {
-        padding: 0 10px !important;
-    }
-
-    #checkoutModal .modal-header {
-        padding: 12px 15px !important;
-    }
-
-    /* Compact summary bar - push text inward */
-    #checkoutModal .checkout-summary-bar {
-        padding: 5px 15px !important;
-        min-height: auto !important;
-        height: auto !important;
-        margin: 5px !important;
-        display: flex !important;
-        justify-content: space-between !important;
-    }
-
-    #checkoutModal .checkout-summary-bar .summary-item {
-        padding: 2px 0 !important;
-    }
-
-    /* Price: push right, bigger */
-    #checkoutModal .checkout-summary-bar .summary-item:first-child,
-    #checkoutModal .summary-item:first-child {
-        text-align: right !important;
-        padding-left: 50px !important;
-    }
-
-    /* Order: push left, bigger */
-    #checkoutModal .checkout-summary-bar .summary-item:last-child,
-    #checkoutModal .summary-item:last-child {
-        text-align: left !important;
-        padding-right: 50px !important;
-    }
-
-    #checkoutModal .checkout-summary-bar .summary-item .label,
-    #checkoutModal .summary-item .label {
-        font-size: 0.85rem !important;
-    }
-
-    #checkoutModal .checkout-summary-bar .summary-item .value,
-    #checkoutModal .summary-item .value {
-        font-size: 1.1rem !important;
-        font-weight: 800 !important;
-    }
-
-    /* Payment cards: narrower, more square */
-    #checkoutModal .payment-grid {
-        gap: 8px !important;
-        width: 85% !important;
-        margin: 0 auto !important;
-    }
-
-    #checkoutModal .payment-card {
-        width: 90px !important;
-        height: 70px !important;
-        min-height: 70px !important;
-        max-height: 70px !important;
-        max-width: 90px !important;
-        padding: 4px !important;
-        margin: 0 0 8px 0 !important;
-    }
-
-    #checkoutModal .payment-card img {
-        width: 32px !important;
-        height: 32px !important;
-        max-width: 32px !important;
-        max-height: 32px !important;
-    }
-
-    /* BTC and ETH: centered on second row */
-    #checkoutModal .payment-card:nth-child(4),
-    #checkoutModal .payment-card:nth-child(5) {
-        justify-self: center !important;
-    }
-
-    #checkoutModal .network-tag {
-        font-size: 0.5rem !important;
-        padding: 1px 4px !important;
-    }
-
-    #checkoutModal .payment-label {
-        font-size: 0.45rem !important;
     }
 }
