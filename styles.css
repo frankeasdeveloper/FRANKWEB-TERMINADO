@@ -11436,60 +11436,42 @@ html:not(.is-scrolling) .community-card {
         font-weight: 800 !important;
     }
 
-    /* Payment cards: HORIZONTAL CAROUSEL */
-    body #checkoutModal .payment-grid {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        gap: 10px !important;
-        width: 100% !important;
+    /* Payment cards: narrower, more square */
+    #checkoutModal .payment-grid {
+        gap: 8px !important;
+        width: 85% !important;
         margin: 0 auto !important;
-        padding: 5px 15px !important;
-        box-sizing: border-box !important;
-        -webkit-overflow-scrolling: touch !important;
-        scroll-snap-type: x mandatory !important;
-        scrollbar-width: none !important;
-        grid-template-columns: none !important;
     }
 
-    body #checkoutModal .payment-grid::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    body #checkoutModal .payment-card {
-        flex: 0 0 70px !important;
-        width: 70px !important;
+    #checkoutModal .payment-card {
+        width: 90px !important;
         height: 70px !important;
-        min-width: 70px !important;
         min-height: 70px !important;
-        max-width: 70px !important;
         max-height: 70px !important;
+        max-width: 90px !important;
         padding: 4px !important;
-        margin: 0 !important;
-        scroll-snap-align: start !important;
-        grid-column: unset !important;
+        margin: 0 0 8px 0 !important;
     }
 
-    body #checkoutModal .payment-card img {
-        width: 30px !important;
-        height: 30px !important;
-        max-width: 30px !important;
-        max-height: 30px !important;
+    #checkoutModal .payment-card img {
+        width: 32px !important;
+        height: 32px !important;
+        max-width: 32px !important;
+        max-height: 32px !important;
     }
 
-    body #checkoutModal .payment-card:nth-child(4),
-    body #checkoutModal .payment-card:nth-child(5) {
-        justify-self: unset !important;
+    /* BTC and ETH: centered on second row */
+    #checkoutModal .payment-card:nth-child(4),
+    #checkoutModal .payment-card:nth-child(5) {
+        justify-self: center !important;
     }
 
-    body #checkoutModal .network-tag {
+    #checkoutModal .network-tag {
         font-size: 0.5rem !important;
         padding: 1px 4px !important;
     }
 
-    body #checkoutModal .payment-label {
+    #checkoutModal .payment-label {
         font-size: 0.45rem !important;
     }
 }
