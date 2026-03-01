@@ -11445,7 +11445,7 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .address-container {
         height: auto !important;
         min-height: 50px !important;
-        max-width: 95% !important;
+        max-width: 85% !important;
     }
 
     #checkoutModal .address-container code {
@@ -11453,7 +11453,7 @@ html:not(.is-scrolling) .community-card {
         word-break: break-all !important;
         overflow: visible !important;
         text-overflow: unset !important;
-        font-size: 0.6rem !important;
+        font-size: 0.65rem !important;
         line-height: 1.4 !important;
         padding: 8px 10px !important;
         display: flex !important;
@@ -11635,7 +11635,7 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .address-container {
         height: auto !important;
         min-height: 50px !important;
-        max-width: 95% !important;
+        max-width: 85% !important;
     }
 
     #checkoutModal .address-container code {
@@ -11643,7 +11643,7 @@ html:not(.is-scrolling) .community-card {
         word-break: break-all !important;
         overflow: visible !important;
         text-overflow: unset !important;
-        font-size: 0.55rem !important;
+        font-size: 0.65rem !important;
         line-height: 1.4 !important;
         padding: 8px 10px !important;
         display: flex !important;
