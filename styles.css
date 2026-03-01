@@ -9608,36 +9608,57 @@ h1.hero-title .title-line {
     }
 
     /* ---- CHECKOUT MODAL - iPhone 14 Pro specific (≤414px) ---- */
+    /* Add inner padding so content doesn't touch modal edges */
+    #checkoutModal .checkout-left-column {
+        padding: 15px !important;
+    }
+
+    #checkoutModal .checkout-body {
+        padding: 0 10px !important;
+    }
+
+    #checkoutModal .modal-header {
+        padding: 12px 15px !important;
+    }
+
+    #checkoutModal .checkout-summary-bar {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    /* Payment cards: more square, narrower */
     #checkoutModal .payment-grid {
-        gap: 5px !important;
-        width: 92% !important;
+        gap: 8px !important;
+        width: 85% !important;
         margin: 0 auto !important;
         box-sizing: border-box !important;
     }
 
     #checkoutModal .payment-card {
-        height: 60px !important;
-        min-height: 60px !important;
-        max-height: 60px !important;
+        width: 90px !important;
+        height: 70px !important;
+        min-height: 70px !important;
+        max-height: 70px !important;
+        max-width: 90px !important;
         padding: 4px !important;
         margin-bottom: 8px !important;
         box-sizing: border-box !important;
     }
 
     #checkoutModal .payment-card img {
-        width: 35px !important;
-        height: 35px !important;
-        max-width: 35px !important;
-        max-height: 35px !important;
+        width: 32px !important;
+        height: 32px !important;
+        max-width: 32px !important;
+        max-height: 32px !important;
     }
 
     #checkoutModal .network-tag {
-        font-size: 0.55rem !important;
-        padding: 1px 5px !important;
+        font-size: 0.5rem !important;
+        padding: 1px 4px !important;
     }
 
     #checkoutModal .payment-label {
-        font-size: 0.5rem !important;
+        font-size: 0.45rem !important;
     }
 
     #checkoutModal .qr-glow-frame {
