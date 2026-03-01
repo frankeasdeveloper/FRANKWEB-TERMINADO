@@ -11281,4 +11281,34 @@ html:not(.is-scrolling) .community-card {
         max-height: 95vh !important;
         overflow-y: auto !important;
     }
+
+    /* Summary bar text - pushed inward and bigger */
+    #checkoutModal .checkout-summary-bar {
+        padding: 5px 15px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    #checkoutModal .checkout-summary-bar .summary-item:first-child,
+    #checkoutModal .summary-item:first-child {
+        text-align: right !important;
+        padding-left: 50px !important;
+    }
+
+    #checkoutModal .checkout-summary-bar .summary-item:last-child,
+    #checkoutModal .summary-item:last-child {
+        text-align: left !important;
+        padding-right: 50px !important;
+    }
+
+    #checkoutModal .checkout-summary-bar .summary-item .label,
+    #checkoutModal .summary-item .label {
+        font-size: 0.85rem !important;
+    }
+
+    #checkoutModal .checkout-summary-bar .summary-item .value,
+    #checkoutModal .summary-item .value {
+        font-size: 1.1rem !important;
+        font-weight: 800 !important;
+    }
 }
