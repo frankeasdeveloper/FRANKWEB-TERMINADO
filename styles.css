@@ -11359,4 +11359,15 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .payment-card:nth-child(5) {
         justify-self: unset !important;
     }
+
+    /* Prevent parents from clipping the carousel */
+    #checkoutModal .checkout-body,
+    #checkoutModal .checkout-left-column {
+        overflow: visible !important;
+    }
+
+    /* Last card padding so it doesn't get cut */
+    #checkoutModal .payment-card:last-child {
+        margin-right: 15px !important;
+    }
 }
