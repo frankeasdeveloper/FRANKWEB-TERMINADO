@@ -11278,6 +11278,7 @@ html:not(.is-scrolling) .community-card {
     #cartModal .modal-content {
         transform: scale(0.82) !important;
         transform-origin: center top !important;
+        margin-top: 30px !important;
         max-height: 95vh !important;
         overflow: visible !important;
         animation: none !important;
