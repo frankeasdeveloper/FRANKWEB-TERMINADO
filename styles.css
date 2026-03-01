@@ -11266,3 +11266,19 @@ html:not(.is-scrolling) .community-card {
         transform: translateX(-50%) translateY(0) !important;
     }
 }
+
+/* ============================================
+   IPHONE 14 PRO (≤414px) - SCALE DOWN
+   Everything is the same as the 480px version
+   just scaled smaller to fit the narrower screen
+   ============================================ */
+@media (max-width: 414px) {
+
+    #checkoutModal .modal-content,
+    #cartModal .modal-content {
+        transform: scale(0.82) !important;
+        transform-origin: center top !important;
+        max-height: 95vh !important;
+        overflow-y: auto !important;
+    }
+}
