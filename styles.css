@@ -11322,7 +11322,8 @@ html:not(.is-scrolling) .community-card {
         gap: 10px !important;
         width: 100% !important;
         margin: 0 auto !important;
-        padding: 5px 15px !important;
+        padding: 8px 20px !important;
+        scroll-padding-inline: 20px !important;
         box-sizing: border-box !important;
         -webkit-overflow-scrolling: touch !important;
         scroll-snap-type: x mandatory !important;
@@ -11344,7 +11345,7 @@ html:not(.is-scrolling) .community-card {
         max-height: 70px !important;
         padding: 4px !important;
         margin: 0 !important;
-        scroll-snap-align: start !important;
+        scroll-snap-align: center !important;
         grid-column: unset !important;
     }
 
@@ -11362,12 +11363,18 @@ html:not(.is-scrolling) .community-card {
 
     /* Prevent parents from clipping the carousel */
     #checkoutModal .checkout-body,
-    #checkoutModal .checkout-left-column {
+    #checkoutModal .checkout-left-column,
+    #checkoutModal .checkout-content {
         overflow: visible !important;
+        clip-path: none !important;
     }
 
-    /* Last card padding so it doesn't get cut */
+    /* Edge cards fully visible */
+    #checkoutModal .payment-card:first-child {
+        margin-left: 5px !important;
+    }
+
     #checkoutModal .payment-card:last-child {
-        margin-right: 15px !important;
+        margin-right: 20px !important;
     }
 }
