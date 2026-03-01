@@ -9641,46 +9641,7 @@ h1.hero-title .title-line {
         font-size: 0.85rem !important;
     }
 
-    /* Payment cards: more square, narrower */
-    #checkoutModal .payment-grid {
-        gap: 8px !important;
-        width: 85% !important;
-        margin: 0 auto !important;
-        box-sizing: border-box !important;
-    }
-
-    #checkoutModal .payment-card {
-        width: 90px !important;
-        height: 70px !important;
-        min-height: 70px !important;
-        max-height: 70px !important;
-        max-width: 90px !important;
-        padding: 4px !important;
-        margin-bottom: 8px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* BTC and ETH: always second row, centered */
-    #checkoutModal .payment-card:nth-child(4),
-    #checkoutModal .payment-card:nth-child(5) {
-        justify-self: center !important;
-    }
-
-    #checkoutModal .payment-card img {
-        width: 32px !important;
-        height: 32px !important;
-        max-width: 32px !important;
-        max-height: 32px !important;
-    }
-
-    #checkoutModal .network-tag {
-        font-size: 0.5rem !important;
-        padding: 1px 4px !important;
-    }
-
-    #checkoutModal .payment-label {
-        font-size: 0.45rem !important;
-    }
+    /* Payment cards: handled by HORIZONTAL CAROUSEL at end of file */
 
     #checkoutModal .qr-glow-frame {
         width: 140px !important;
@@ -11431,7 +11392,7 @@ html:not(.is-scrolling) .community-card {
     }
 
     /* Payment cards: HORIZONTAL CAROUSEL with scroll */
-    #checkoutModal .payment-grid {
+    body #checkoutModal .payment-grid {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
@@ -11445,13 +11406,14 @@ html:not(.is-scrolling) .community-card {
         -webkit-overflow-scrolling: touch !important;
         scroll-snap-type: x mandatory !important;
         scrollbar-width: none !important;
+        grid-template-columns: none !important;
     }
 
-    #checkoutModal .payment-grid::-webkit-scrollbar {
+    body #checkoutModal .payment-grid::-webkit-scrollbar {
         display: none !important;
     }
 
-    #checkoutModal .payment-card {
+    body #checkoutModal .payment-card {
         flex: 0 0 70px !important;
         width: 70px !important;
         height: 70px !important;
@@ -11465,24 +11427,24 @@ html:not(.is-scrolling) .community-card {
         grid-column: unset !important;
     }
 
-    #checkoutModal .payment-card img {
+    body #checkoutModal .payment-card img {
         width: 30px !important;
         height: 30px !important;
         max-width: 30px !important;
         max-height: 30px !important;
     }
 
-    #checkoutModal .payment-card:nth-child(4),
-    #checkoutModal .payment-card:nth-child(5) {
+    body #checkoutModal .payment-card:nth-child(4),
+    body #checkoutModal .payment-card:nth-child(5) {
         justify-self: unset !important;
     }
 
-    #checkoutModal .network-tag {
+    body #checkoutModal .network-tag {
         font-size: 0.5rem !important;
         padding: 1px 4px !important;
     }
 
-    #checkoutModal .payment-label {
+    body #checkoutModal .payment-label {
         font-size: 0.45rem !important;
     }
 
