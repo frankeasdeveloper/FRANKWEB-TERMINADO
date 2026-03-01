@@ -11489,20 +11489,56 @@ html:not(.is-scrolling) .community-card {
         justify-content: center !important;
     }
 
-    /* Taller modal to fit confirm button */
+    /* Taller modal - everything must fit without scroll */
     #checkoutModal .modal-content {
-        max-height: 92vh !important;
+        max-height: 95vh !important;
+        overflow-y: auto !important;
     }
 
     #checkoutModal .checkout-content.expanded {
-        overflow-y: auto !important;
-        max-height: 85vh !important;
+        overflow: visible !important;
+        max-height: none !important;
     }
 
-    #checkoutModal #confirmPayment {
+    /* Compact QR - move up */
+    #checkoutModal .qr-glow-frame {
+        width: 120px !important;
+        height: 120px !important;
+        margin: -15px auto 0 auto !important;
+    }
+
+    /* Compact expanded right column */
+    #checkoutModal .checkout-content.expanded .checkout-right-column,
+    #checkoutModal .checkout-content.expanded .qr-wrapper {
+        margin-top: -15px !important;
+    }
+
+    /* Compact address container */
+    #checkoutModal .address-container {
+        max-width: 260px !important;
+        height: 35px !important;
+        padding: 4px 8px !important;
+        gap: 6px !important;
+        margin-top: -5px !important;
+    }
+
+    #checkoutModal .address-container code {
+        font-size: 0.75rem !important;
+    }
+
+    #checkoutModal .copy-tab-btn {
+        font-size: 0.65rem !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Confirm button - always visible at bottom */
+    #checkoutModal #confirmPayment,
+    #checkoutModal .checkout-body button[id="confirmPayment"] {
         display: block !important;
-        margin: 5px auto 10px auto !important;
+        margin: 0 auto 5px auto !important;
         visibility: visible !important;
         opacity: 1 !important;
+        position: relative !important;
+        z-index: 200 !important;
     }
 }
