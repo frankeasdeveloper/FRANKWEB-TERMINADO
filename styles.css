@@ -11504,13 +11504,13 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .qr-glow-frame {
         width: 110px !important;
         height: 110px !important;
-        margin: -15px auto -5px auto !important;
+        margin: -25px auto -10px auto !important;
     }
 
     /* Compact expanded right column */
     #checkoutModal .checkout-content.expanded .checkout-right-column,
     #checkoutModal .checkout-content.expanded .qr-wrapper {
-        margin-top: -20px !important;
+        margin-top: -30px !important;
     }
 
     /* Compact address container */
@@ -11519,7 +11519,7 @@ html:not(.is-scrolling) .community-card {
         height: 32px !important;
         padding: 3px 8px !important;
         gap: 6px !important;
-        margin-top: -8px !important;
+        margin-top: -15px !important;
     }
 
     #checkoutModal .address-container code {
@@ -11535,7 +11535,7 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal #confirmPayment,
     #checkoutModal .checkout-body button[id="confirmPayment"] {
         display: block !important;
-        margin: 0 auto 5px auto !important;
+        margin: -10px auto 5px auto !important;
         visibility: visible !important;
         opacity: 1 !important;
         position: relative !important;
