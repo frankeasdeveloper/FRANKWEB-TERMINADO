@@ -11319,10 +11319,9 @@ html:not(.is-scrolling) .community-card {
         overflow-x: auto !important;
         overflow-y: hidden !important;
         gap: 10px !important;
-        width: 100% !important;
+        width: calc(100% - 10px) !important;
         margin: 0 auto !important;
-        padding: 8px 20px !important;
-        scroll-padding-inline: 20px !important;
+        padding: 8px 10px !important;
         box-sizing: border-box !important;
         -webkit-overflow-scrolling: touch !important;
         scroll-snap-type: x mandatory !important;
