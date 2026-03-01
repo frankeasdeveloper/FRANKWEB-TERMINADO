@@ -11285,6 +11285,10 @@ html:not(.is-scrolling) .community-card {
         transition: none !important;
     }
 
+    #checkoutModal .checkout-content.expanded {
+        margin-top: 60px !important;
+    }
+
     #customerInfoModal .modal-content,
     .modal#customerInfoModal .modal-content {
         transform: scale(0.72) !important;
