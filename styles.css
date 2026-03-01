@@ -11470,6 +11470,45 @@ html:not(.is-scrolling) .community-card {
    ============================================ */
 @media (max-width: 414px) {
 
+    /* Scale down top navbar */
+    .navbar {
+        padding: 6px 2px !important;
+    }
+
+    .navbar .container {
+        padding: 0 5px !important;
+    }
+
+    .nav-logo {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .brand-text {
+        font-size: 1.1rem !important;
+    }
+
+    /* Scale down mobile sticky header */
+    .mobile-sticky-header a {
+        font-size: 0.55rem !important;
+        padding: 3px 1px !important;
+    }
+
+    .mobile-header-nav {
+        gap: 4px !important;
+    }
+
+    .mobile-header-icons {
+        gap: 4px !important;
+        margin-left: 4px !important;
+    }
+
+    .mobile-lang-btn,
+    .mobile-cart-btn {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
     /* Force center ALL modals */
     .modal.active {
         display: flex !important;
