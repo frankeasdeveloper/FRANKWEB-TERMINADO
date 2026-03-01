@@ -11376,4 +11376,18 @@ html:not(.is-scrolling) .community-card {
     #checkoutModal .payment-card:last-child {
         margin-right: 30px !important;
     }
+
+    /* Selected card lifts up */
+    #checkoutModal .payment-card {
+        transition: transform 0.2s ease !important;
+    }
+
+    #checkoutModal .payment-card.selected {
+        transform: translateY(-5px) scale(1.05) !important;
+    }
+
+    /* Card under finger lifts while touching */
+    #checkoutModal .payment-card:active {
+        transform: translateY(-3px) !important;
+    }
 }
