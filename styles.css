@@ -11328,6 +11328,7 @@ html:not(.is-scrolling) .community-card {
         scroll-snap-type: x mandatory !important;
         scrollbar-width: none !important;
         grid-template-columns: none !important;
+        align-items: center !important;
     }
 
     #checkoutModal .payment-grid::-webkit-scrollbar {
