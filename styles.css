@@ -11288,6 +11288,7 @@ html:not(.is-scrolling) .community-card {
     .modal#customerInfoModal .modal-content {
         transform: scale(0.72) !important;
         transform-origin: center center !important;
+        margin-top: 50px !important;
         max-height: none !important;
         min-height: 600px !important;
         height: auto !important;
