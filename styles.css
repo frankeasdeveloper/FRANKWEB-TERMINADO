@@ -11274,6 +11274,18 @@ html:not(.is-scrolling) .community-card {
    ============================================ */
 @media (max-width: 414px) {
 
+    /* Force center ALL modals */
+    .modal.active {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+    }
+
+    .modal .modal-content {
+        margin: 0 auto !important;
+    }
+
     #checkoutModal .modal-content,
     #cartModal .modal-content {
         transform: scale(0.82) !important;
