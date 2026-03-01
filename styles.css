@@ -11370,10 +11370,10 @@ html:not(.is-scrolling) .community-card {
 
     /* Edge cards fully visible */
     #checkoutModal .payment-card:first-child {
-        margin-left: 5px !important;
+        margin-left: 20px !important;
     }
 
     #checkoutModal .payment-card:last-child {
-        margin-right: 20px !important;
+        margin-right: 30px !important;
     }
 }
