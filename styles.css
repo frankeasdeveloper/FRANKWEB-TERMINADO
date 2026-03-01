@@ -11276,6 +11276,14 @@ html:not(.is-scrolling) .community-card {
    ============================================ */
 @media (min-width: 415px) and (max-width: 430px) {
 
+    /* Scale down mobile sticky header proportionally */
+    .mobile-sticky-header {
+        transform: scale(0.96) !important;
+        transform-origin: center top !important;
+        width: 104.17vw !important;
+        left: -2.08vw !important;
+    }
+
     /* Force center ALL modals */
     .modal.active {
         display: flex !important;
@@ -11490,10 +11498,10 @@ html:not(.is-scrolling) .community-card {
 
     /* Scale down mobile sticky header proportionally */
     .mobile-sticky-header {
-        transform: scale(0.88) !important;
+        transform: scale(0.92) !important;
         transform-origin: center top !important;
-        width: 113.64vw !important;
-        left: -6.82vw !important;
+        width: 108.7vw !important;
+        left: -4.35vw !important;
     }
 
     /* Force center ALL modals */
