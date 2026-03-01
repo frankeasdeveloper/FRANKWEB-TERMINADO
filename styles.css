@@ -11399,24 +11399,41 @@ html:not(.is-scrolling) .community-card {
 
     /* Compact summary bar - push text inward */
     #checkoutModal .checkout-summary-bar {
-        padding: 5px 25px !important;
+        padding: 5px 15px !important;
         min-height: auto !important;
         height: auto !important;
         margin: 5px !important;
+        display: flex !important;
+        justify-content: space-between !important;
     }
 
     #checkoutModal .checkout-summary-bar .summary-item {
         padding: 2px 0 !important;
     }
 
+    /* Price: push right, bigger */
+    #checkoutModal .checkout-summary-bar .summary-item:first-child,
+    #checkoutModal .summary-item:first-child {
+        text-align: right !important;
+        padding-left: 15px !important;
+    }
+
+    /* Order: push left, bigger */
+    #checkoutModal .checkout-summary-bar .summary-item:last-child,
+    #checkoutModal .summary-item:last-child {
+        text-align: left !important;
+        padding-right: 15px !important;
+    }
+
     #checkoutModal .checkout-summary-bar .summary-item .label,
     #checkoutModal .summary-item .label {
-        font-size: 0.7rem !important;
+        font-size: 0.85rem !important;
     }
 
     #checkoutModal .checkout-summary-bar .summary-item .value,
     #checkoutModal .summary-item .value {
-        font-size: 0.85rem !important;
+        font-size: 1.1rem !important;
+        font-weight: 800 !important;
     }
 
     /* Payment cards: narrower, more square */
