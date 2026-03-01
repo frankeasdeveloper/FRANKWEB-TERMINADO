@@ -11361,6 +11361,19 @@ html:not(.is-scrolling) .community-card {
         justify-self: unset !important;
     }
 
+    /* Force BTC/ETH same size as USDT */
+    #checkoutModal .payment-card.type-btc,
+    #checkoutModal .payment-card.type-eth {
+        flex: 0 0 90px !important;
+        width: 90px !important;
+        height: 70px !important;
+        min-width: 90px !important;
+        min-height: 70px !important;
+        max-width: 90px !important;
+        max-height: 70px !important;
+        align-self: center !important;
+    }
+
     /* Prevent parents from clipping the carousel */
     #checkoutModal .checkout-body,
     #checkoutModal .checkout-left-column,
